@@ -1,8 +1,7 @@
-import { PrismaAdapter } from "@auth/prisma-adapter";
-import { type DefaultSession, type NextAuthConfig } from "next-auth";
-import DiscordProvider from "next-auth/providers/discord";
+import { type NextAuthConfig } from "next-auth";
 
-import { db } from "@/server/db";
+import { env } from "@/env";
+import Google from "next-auth/providers/google";
 
 /**
  * Module augmentation for `next-auth` types. Allows us to add custom properties to the `session`
@@ -10,19 +9,71 @@ import { db } from "@/server/db";
  *
  * @see https://next-auth.js.org/getting-started/typescript#module-augmentation
  */
+
 declare module "next-auth" {
-  interface Session extends DefaultSession {
-    user: {
-      id: string;
-      // ...other properties
-      // role: UserRole;
-    } & DefaultSession["user"];
+  /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
+}
+declare module "next-auth" {
+  //   interface CustomUser extends User {
+  //     access_token: string;
+  //     refresh_token: string;
+  //   }
+
+  interface JWT {
+    access_token: string;
+    expires_at: number;
+    refresh_token?: string;
+    error?: "RefreshTokenError";
   }
+
+  //   interface Session extends DefaultSession {
+  //     access_token: string;
+  //     refresh_token: string;
+  //     user: {
+  //       id: string;
+
+  //       // ...other properties
+  //       // role: UserRole;
+  //     } & CustomUser;
+  //   }
 
   // interface User {
   //   // ...other properties
   //   // role: UserRole;
   // }
+}
+
+declare module "next-auth" {
+  interface Session {
+    access_token: string;
+    refresh_token?: string;
+    error?: "RefreshTokenError";
+  }
+}
+
+// declare module "next-auth/jwt" {
+//   interface JWT {
+//     access_token: string;
+//     expires_at: number;
+//     refresh_token?: string;
+//     error?: "RefreshTokenError";
+//   }
+// }
+
+const scopes = [
+  "/auth/drive.file",
+  "/auth/drive",
+  "/auth/drive.appdata",
+  "/auth/drive.appfolder",
+  "/auth/drive.metadata.readonly",
+  "/auth/userinfo.email",
+  "/auth/userinfo.profile",
+];
+
+export function getGoogleScopes() {
+  const prefix = "https://www.googleapis.com";
+
+  return scopes.map((scope) => prefix + scope).join(" ");
 }
 
 /**
@@ -32,7 +83,19 @@ declare module "next-auth" {
  */
 export const authConfig = {
   providers: [
-    DiscordProvider,
+    Google({
+      clientId: env.GOOGLE_CLIENT_ID,
+      clientSecret: env.GOOGLE_CLIENT_SECRET,
+      authorization: {
+        params: {
+          scope: getGoogleScopes() + " openid",
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
+        },
+      },
+    }),
+
     /**
      * ...add more providers here.
      *
@@ -43,14 +106,70 @@ export const authConfig = {
      * @see https://next-auth.js.org/providers/github
      */
   ],
-  adapter: PrismaAdapter(db),
   callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
+    async jwt({ token, account }) {
+      if (account) {
+        // First-time login, save the `access_token`, its expiry and the `refresh_token`
+        return {
+          ...token,
+          access_token: account.access_token,
+          expires_at: account.expires_at,
+          refresh_token: account.refresh_token,
+        };
+      } else if (Date.now() < token.expires_at * 1000) {
+        // Subsequent logins, but the `access_token` is still valid
+        return token;
+      } else {
+        // Subsequent logins, but the `access_token` has expired, try to refresh it
+        if (!token.refresh_token) throw new TypeError("Missing refresh_token");
+
+        try {
+          // The `token_endpoint` can be found in the provider's documentation. Or if they support OIDC,
+          // at their `/.well-known/openid-configuration` endpoint.
+          // i.e. https://accounts.google.com/.well-known/openid-configuration
+          const response = await fetch("https://oauth2.googleapis.com/token", {
+            method: "POST",
+            body: new URLSearchParams({
+              client_id: env.GOOGLE_CLIENT_ID!,
+              client_secret: env.GOOGLE_CLIENT_SECRET!,
+              grant_type: "refresh_token",
+              refresh_token: token.refresh_token!,
+            }),
+          });
+
+          const tokensOrError = await response.json();
+
+          if (!response.ok) throw tokensOrError;
+
+          const newTokens = tokensOrError as {
+            access_token: string;
+            expires_in: number;
+            refresh_token?: string;
+          };
+
+          token.access_token = newTokens.access_token;
+          token.expires_at = Math.floor(
+            Date.now() / 1000 + newTokens.expires_in,
+          );
+          // Some providers only issue refresh tokens once, so preserve if we did not get a new one
+          if (newTokens.refresh_token)
+            token.refresh_token = newTokens.refresh_token;
+          return token;
+        } catch (error) {
+          console.error("Error refreshing access_token", error);
+          // If we fail to refresh the token, return an error so we can handle it on the page
+          token.error = "RefreshTokenError";
+          return token;
+        }
+      }
+    },
+    async session({ session, token }) {
+      session.error = token.error;
+      return {
+        ...session,
+        refresh_token: token.refresh_token,
+        access_token: token.access_token,
+      };
+    },
   },
 } satisfies NextAuthConfig;
