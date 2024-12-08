@@ -1,5 +1,6 @@
 "use client";
 import { api } from "@/trpc/react";
+import { type drive_v3 } from "googleapis";
 import {
   File,
   FileText,
@@ -12,15 +13,26 @@ import {
 import { useState } from "react";
 
 export default function FileExplorer() {
-  const [folderId, setFolderId] = useState<string>();
+  const [folders, setFolders] = useState<drive_v3.Schema$File[]>([
+    {
+      id: "root",
+      name: "Root",
+    },
+  ]);
 
   const { data, isLoading } = api.files.getFilesInFolder.useQuery({
-    folderId: folderId,
+    folderId: folders ? folders[folders.length - 1]!.id! : undefined,
   });
 
-  const handleButtonClick = (fileId: string, mimeType: string) => {
+  const handleButtonClick = (
+    fileId: string,
+    mimeType: string,
+    name: string,
+  ) => {
     if (mimeType === "application/vnd.google-apps.folder") {
-      setFolderId(fileId);
+      setFolders((prev) => {
+        return prev ? [...prev, { id: fileId, name }] : [{ id: fileId, name }];
+      });
       return;
     }
   };
@@ -28,13 +40,30 @@ export default function FileExplorer() {
   return (
     <div className="container flex flex-col gap-2 rounded-lg border p-8">
       {isLoading ? <LoaderIcon className="animate-spin" /> : null}
+      <div className="flex">
+        {folders && !isLoading
+          ? folders.map((folder, index) => (
+              <button
+                key={folder.id}
+                className="hover: flex gap-4 rounded p-2 hover:text-blue-600 hover:underline [&:not(:last-child)]:border-r"
+                onClick={() => {
+                  setFolders((prev) => {
+                    return prev ? prev.slice(0, index + 1) : [];
+                  });
+                }}
+              >
+                <p>{folder.name}</p>
+              </button>
+            ))
+          : null}
+      </div>
       {data
         ? data.map((file) => (
             <button
               key={file.id}
               className="flex gap-4 rounded border p-2"
               onClick={() => {
-                handleButtonClick(file.id!, file.mimeType!);
+                handleButtonClick(file.id!, file.mimeType!, file.name!);
               }}
             >
               {getIconFromMimeType({ mimeType: file.mimeType })}
