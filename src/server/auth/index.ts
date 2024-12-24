@@ -8,7 +8,7 @@ const { auth: uncachedAuth, handlers, signIn, signOut } = NextAuth(authConfig);
 
 const auth = async () => {
   const session = await cache(uncachedAuth)();
-  console.log({ session });
+
   if (!session) {
     redirect("/api/auth/signin");
   }
