@@ -4,6 +4,25 @@ import { env } from "@/env";
 import { auth } from "@/server/auth";
 import { google } from "googleapis";
 
+async function getAuthenticatedDocument() {
+  const session = await auth();
+  const clientId = env.GOOGLE_CLIENT_ID;
+  const clientSecret = env.GOOGLE_CLIENT_SECRET;
+  const accessToken = session?.access_token;
+  const refreshToken = session?.refresh_token;
+
+  const oauth = new google.auth.OAuth2({
+    clientId,
+    clientSecret,
+  });
+  oauth.setCredentials({
+    access_token: accessToken,
+    refresh_token: refreshToken,
+  });
+
+  return google.docs({ auth: oauth, version: "v1" });
+}
+
 async function getAuthenticatedDrive() {
   const session = await auth();
   const clientId = env.GOOGLE_CLIENT_ID;
@@ -59,7 +78,7 @@ export async function downloadFile(fileId: string) {
 
 type Config = {
   id: string;
-  folderId: string;
+  folderId: string | null;
   defaultTemplateDocId: string;
 };
 
@@ -100,7 +119,7 @@ export async function createConfigFile() {
       media: {
         mimeType: "application/json",
         body: JSON.stringify({
-          folderId: "root",
+          folderId: null,
           defaultTemplateDocId: "",
         }),
       },
@@ -122,6 +141,21 @@ export async function getFileById(fileId: string) {
     });
 
     return fileContent.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+export async function getDocumentById(documentId: string) {
+  const document = await getAuthenticatedDocument();
+
+  try {
+    const res = await document.documents.get({
+      documentId,
+    });
+
+    return res.data;
   } catch (error) {
     console.error(error);
     return null;
