@@ -1,13 +1,16 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { api } from "@/trpc/react";
 import clsx from "clsx";
 import { type drive_v3 } from "googleapis";
@@ -15,15 +18,21 @@ import {
   File,
   FileText,
   Folder,
-  LoaderIcon,
   Map,
   Presentation,
+  Settings,
   Sheet,
 } from "lucide-react";
 import { useState } from "react";
 
 type FileExplorerProps = {
-  onSaveClick: (templateFileId: string) => void;
+  onSaveClick: ({
+    folderId,
+    templateFileId,
+  }: {
+    folderId: string | null;
+    templateFileId: string;
+  }) => void;
   defaultTemplateId?: string;
 };
 
@@ -61,78 +70,96 @@ export default function FileExplorer({
   };
 
   return (
-    <Card>
-      {isLoading ? <LoaderIcon className="animate-spin" /> : null}
-      <CardHeader>
-        <CardTitle>Choose a default Template</CardTitle>
-        <CardDescription className="flex">
-          {folders && !isLoading
-            ? folders.map((folder, index) => (
-                <Button
-                  key={folder.id}
-                  className="hover: flex gap-4 rounded p-2 hover:text-blue-600 hover:underline [&:not(:last-child)]:border-r"
-                  onClick={() => {
-                    setFolders((prev) => {
-                      return prev ? prev.slice(0, index + 1) : [];
-                    });
-                  }}
-                  variant="ghost"
-                >
-                  <p>{folder.name}</p>
-                </Button>
-              ))
-            : null}
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-2">
-        {data
-          ? data.map((file) => (
-              <button
-                key={file.id}
-                className={clsx(
-                  "flex gap-4 rounded border p-2",
-                  selectedFile === file.id
-                    ? "border-2 border-blue-600 bg-blue-300"
-                    : "hover:bg-gray-100",
-                )}
-                onClick={() => {
-                  handleDocumentSelectClick(
-                    file.id!,
-                    file.mimeType!,
-                    file.name!,
-                  );
-                }}
-              >
-                {getIconFromMimeType({ mimeType: file.mimeType })}
-                <p>{file.name}</p>
-              </button>
-            ))
-          : null}
-      </CardContent>
-      <CardFooter className="flex gap-4">
-        <Button
-          disabled={!selectedFile}
-          onClick={() => {
-            if (selectedFile) {
-              onSaveClick(selectedFile);
-              return;
-            }
-            throw new Error("No File selected");
-          }}
-        >
-          Save
-        </Button>
-        <Button
-          disabled={!selectedFile}
-          onClick={() => {
-            setSelectedFile(null);
-            setFolders([{ id: "root", name: "Root" }]);
-          }}
-        >
-          Cancel
-        </Button>
-      </CardFooter>
-    </Card>
+    <Dialog>
+      <DialogTrigger>
+        <Settings />
+      </DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Choose a default Template</DialogTitle>
+          <DialogDescription className="flex">
+            {folders && !isLoading
+              ? folders.map((folder, index) => (
+                  <Button
+                    key={folder.id}
+                    className="hover: flex gap-4 rounded hover:text-blue-600 hover:underline [&:not(:last-child)]:border-r"
+                    onClick={() => {
+                      setFolders((prev) => {
+                        return prev ? prev.slice(0, index + 1) : [];
+                      });
+                    }}
+                    variant="ghost"
+                  >
+                    <p>{folder.name}</p>
+                  </Button>
+                ))
+              : null}
+          </DialogDescription>
+        </DialogHeader>
+        <ScrollArea className="h-[300px] w-full rounded-md border p-4">
+          <div className="flex w-full flex-col gap-2">
+            {data
+              ? data.map((file) => (
+                  <button
+                    key={file.id}
+                    className={clsx(
+                      "flex gap-4 rounded border p-2",
+                      selectedFile === file.id
+                        ? "border-2 border-blue-600 bg-blue-300"
+                        : "hover:bg-gray-100",
+                    )}
+                    onClick={() => {
+                      handleDocumentSelectClick(
+                        file.id!,
+                        file.mimeType!,
+                        file.name!,
+                      );
+                    }}
+                  >
+                    {getIconFromMimeType({ mimeType: file.mimeType })}
+                    <p>{file.name}</p>
+                  </button>
+                ))
+              : null}
+          </div>
+        </ScrollArea>
+
+        <DialogFooter>
+          <DialogClose asChild>
+            <Button
+              disabled={!selectedFile}
+              onClick={() => {
+                if (selectedFile) {
+                  onSaveClick({
+                    folderId:
+                      folders.length > 2
+                        ? folders[folders.length - 1]!.id!
+                        : null,
+                    templateFileId: selectedFile,
+                  });
+                  return;
+                }
+                throw new Error("No File selected");
+              }}
+            >
+              Save
+            </Button>
+          </DialogClose>
+          <DialogClose asChild>
+            <Button
+              disabled={!selectedFile}
+              variant="secondary"
+              onClick={() => {
+                setSelectedFile(null);
+                setFolders([{ id: "root", name: "Root" }]);
+              }}
+            >
+              Cancel
+            </Button>
+          </DialogClose>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
   );
 }
 
