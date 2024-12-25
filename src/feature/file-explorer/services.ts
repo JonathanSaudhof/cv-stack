@@ -58,6 +58,7 @@ export async function downloadFile(fileId: string) {
 }
 
 type Config = {
+  id: string;
   folderId: string;
   defaultTemplateDocId: string;
 };
@@ -68,15 +69,21 @@ export async function getConfigFile() {
   const drive = await getAuthenticatedDrive();
 
   try {
-    const config = await drive.files.list({
+    const fileList = await drive.files.list({
       q: `name = '${CONFIG_FILE_NAME}'`,
       fields: "nextPageToken, files(id, name)",
       spaces: "appDataFolder",
     });
-
-    return config.data.files ? config.data.files[0] : null;
+    // return actual content of the file
+    const configFile = fileList.data.files ? fileList.data.files[0] : null;
+    if (!configFile?.id) {
+      return null;
+    }
+    const config = await getFileById(configFile?.id);
+    return { id: configFile.id, ...config } as Config;
   } catch (error) {
     console.error(error);
+    return null;
   }
 }
 
@@ -109,11 +116,43 @@ export async function getFileById(fileId: string) {
   const drive = await getAuthenticatedDrive();
 
   try {
-    return await drive.files.get({
-      fileId,
-      fields: "id, name, mimeType",
+    const fileContent = await drive.files.get({
+      fileId: fileId,
+      alt: "media",
+    });
+
+    return fileContent.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+export async function updateConfigFile(config: Config) {
+  const drive = await getAuthenticatedDrive();
+
+  const configFile = await getConfigFile();
+
+  if (!configFile) {
+    console.error("Config file not found");
+    return null;
+  }
+
+  if (!configFile.id) {
+    console.error("Config file id not found");
+    return null;
+  }
+
+  try {
+    await drive.files.update({
+      fileId: configFile.id,
+      media: {
+        mimeType: "application/json",
+        body: JSON.stringify(config),
+      },
     });
   } catch (error) {
     console.error(error);
+    return null;
   }
 }

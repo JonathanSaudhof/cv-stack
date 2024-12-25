@@ -23,13 +23,13 @@ import {
 import { useState } from "react";
 
 type FileExplorerProps = {
-  onSelect: (fileId: string) => void;
-  initialSelectedFile?: string;
+  onSaveClick: (templateFileId: string) => void;
+  defaultTemplateId?: string;
 };
 
 export default function FileExplorer({
-  onSelect,
-  initialSelectedFile,
+  onSaveClick,
+  defaultTemplateId,
 }: FileExplorerProps) {
   const [folders, setFolders] = useState<drive_v3.Schema$File[]>([
     {
@@ -39,7 +39,7 @@ export default function FileExplorer({
   ]);
 
   const [selectedFile, setSelectedFile] = useState<string | null>(
-    initialSelectedFile ?? null,
+    defaultTemplateId ?? null,
   );
 
   const { data, isLoading } = api.files.getFilesInFolder.useQuery({
@@ -110,7 +110,18 @@ export default function FileExplorer({
           : null}
       </CardContent>
       <CardFooter className="flex gap-4">
-        <Button disabled={!selectedFile}>Save</Button>
+        <Button
+          disabled={!selectedFile}
+          onClick={() => {
+            if (selectedFile) {
+              onSaveClick(selectedFile);
+              return;
+            }
+            throw new Error("No File selected");
+          }}
+        >
+          Save
+        </Button>
         <Button
           disabled={!selectedFile}
           onClick={() => {
