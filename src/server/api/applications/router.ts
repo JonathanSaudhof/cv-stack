@@ -1,10 +1,7 @@
-import {
-  createNewApplication,
-  getAllApplications,
-} from "@/feature/application/services";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import { getConfigFile } from "@/feature/file-explorer/services";
+import applicationService from "@/feature/application/service";
 
 export const applicationsRouter = createTRPCRouter({
   createApplication: protectedProcedure
@@ -24,7 +21,7 @@ export const applicationsRouter = createTRPCRouter({
       if (!config.defaultTemplateDocId) {
         throw new Error("Config file is missing defaultTemplateDocId");
       }
-      await createNewApplication({
+      await applicationService.createNewApplication({
         companyName: input.companyName,
         baseFolderId: config?.folderId,
         templateDocId: config?.defaultTemplateDocId,
@@ -36,7 +33,25 @@ export const applicationsRouter = createTRPCRouter({
         folderId: z.string(),
       }),
     )
+    .output(
+      z.array(
+        z.object({
+          id: z.string(),
+          name: z.string(),
+        }),
+      ),
+    )
     .query(async ({ input }) => {
-      return await getAllApplications(input.folderId);
+      const rawApplications = await applicationService.getAllApplications(
+        input.folderId,
+      );
+      if (!rawApplications) {
+        return [];
+      }
+
+      return rawApplications.map((application) => ({
+        id: application.id ?? "",
+        name: application.name ?? "",
+      }));
     }),
 });

@@ -1,7 +1,7 @@
 import { createNewFolder, getAuthenticatedDrive } from "@/lib/google";
 import { auth } from "@/server/auth";
 
-export const createNewApplication = async ({
+const createNewApplication = async ({
   companyName,
   templateDocId,
   baseFolderId,
@@ -35,7 +35,7 @@ export const createNewApplication = async ({
   }
 };
 
-export async function copyTemplateDocument({
+async function copyTemplateDocument({
   templateDocId,
   folderId,
   documentName,
@@ -57,7 +57,24 @@ export async function copyTemplateDocument({
   return document.data.id;
 }
 
-export async function createStatusFile(folderId: string, status: string) {
+enum ApplicationStageTitle {
+  PENDING = "PENDING",
+  INTERVIEW = "INTERVIEW",
+  REJECTED = "REJECTED",
+  OFFER = "OFFER",
+}
+
+type ApplicationStage = {
+  title: ApplicationStageTitle;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
+type ApplicationMetaData = {
+  stages: string;
+};
+
+async function createMetaDataFile(folderId: string, status: string) {
   const drive = await getAuthenticatedDrive();
 
   const file = await drive.files.create({
@@ -75,7 +92,7 @@ export async function createStatusFile(folderId: string, status: string) {
   return file.data.id;
 }
 
-export async function getAllApplications(folderId: string) {
+async function getAllApplications(folderId: string) {
   const drive = await getAuthenticatedDrive();
 
   const folders = await drive.files.list({
@@ -87,3 +104,12 @@ export async function getAllApplications(folderId: string) {
     (file) => file.mimeType === "application/vnd.google-apps.folder",
   );
 }
+
+const applicationService = {
+  createNewApplication,
+  copyTemplateDocument,
+  createStatusFile: createMetaDataFile,
+  getAllApplications,
+};
+
+export default applicationService;

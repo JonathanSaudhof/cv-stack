@@ -15,11 +15,10 @@ import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export function CreateApplication() {
+export default function CreateApplication() {
   const [companyName, setCompanyName] = useState<string>("");
   const router = useRouter();
-  const { mutate, error, isPending } =
-    api.applications.createApplication.useMutation();
+  const { mutate } = api.applications.createApplication.useMutation();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCompanyName(e.target.value);

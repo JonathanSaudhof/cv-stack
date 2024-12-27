@@ -129,7 +129,7 @@ export default function FileExplorer({ defaultTemplateId }: FileExplorerProps) {
                         "flex gap-4 rounded border-2 p-2",
                         isAllowed ? "border-gray-600 text-gray-600" : null,
                         selectedFile === file.id
-                          ? "border-2 border-blue-600 bg-blue-300"
+                          ? "border-blue-600 bg-blue-300"
                           : "hover:bg-gray-100",
                       )}
                       onClick={() => {

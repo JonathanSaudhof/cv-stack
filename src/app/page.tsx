@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { CreateApplication } from "@/feature/application/CreateApplication";
 import { api, HydrateClient } from "@/trpc/server";
 import FileExplorer from "../feature/file-explorer/FileExplorer";
+import CreateApplication from "@/feature/application/components/create-application";
+import ApplicationsList from "@/feature/application/components/application-list";
 
 export default async function Home() {
   const template = await api.config.getTemplateFile();
@@ -37,14 +38,11 @@ export default async function Home() {
 
           <CreateApplication />
         </section>
-        <section className="p-8">
-          <h2 className="text-2xl font-semibold">Applications</h2>
-          <ul>
-            <li>Application 1</li>
-            <li>Application 2</li>
-            <li>Application 3</li>
-          </ul>
-        </section>
+        {config?.folderId ? (
+          <ApplicationsList folderId={config.folderId} />
+        ) : (
+          <div>No folderId found</div>
+        )}
       </main>
     </HydrateClient>
   );
