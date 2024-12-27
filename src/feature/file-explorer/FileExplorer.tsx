@@ -23,23 +23,20 @@ import {
   Settings,
   Sheet,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 type FileExplorerProps = {
-  onSaveClick: ({
-    folderId,
-    templateFileId,
-  }: {
-    folderId: string | null;
-    templateFileId: string;
-  }) => void;
-  defaultTemplateId?: string;
+  defaultTemplateId: string | null;
 };
 
-export default function FileExplorer({
-  onSaveClick,
-  defaultTemplateId,
-}: FileExplorerProps) {
+const SELECTABLE_MIME_TYPES = [
+  "application/vnd.google-apps.folder",
+  "application/vnd.google-apps.document",
+];
+
+export default function FileExplorer({ defaultTemplateId }: FileExplorerProps) {
+  const router = useRouter();
   const [folders, setFolders] = useState<drive_v3.Schema$File[]>([
     {
       id: "root",
@@ -55,6 +52,9 @@ export default function FileExplorer({
     folderId: folders ? folders[folders.length - 1]!.id! : undefined,
   });
 
+  const { mutate, error, isPending } =
+    api.config.updateConfigFile.useMutation();
+
   const handleDocumentSelectClick = (
     fileId: string,
     mimeType: string,
@@ -67,6 +67,25 @@ export default function FileExplorer({
       return;
     }
     setSelectedFile(fileId);
+  };
+
+  const handleSaveClick = async () => {
+    if (!selectedFile) {
+      console.error("No file selected");
+      return;
+    }
+
+    mutate(
+      {
+        folderId: folders.length > 1 ? folders[folders.length - 1]!.id! : null,
+        defaultTemplateDocId: selectedFile,
+      },
+      {
+        onSuccess: () => {
+          router.refresh();
+        },
+      },
+    );
   };
 
   return (
@@ -99,49 +118,44 @@ export default function FileExplorer({
         <ScrollArea className="h-[300px] w-full rounded-md border p-4">
           <div className="flex w-full flex-col gap-2">
             {data
-              ? data.map((file) => (
-                  <button
-                    key={file.id}
-                    className={clsx(
-                      "flex gap-4 rounded border p-2",
-                      selectedFile === file.id
-                        ? "border-2 border-blue-600 bg-blue-300"
-                        : "hover:bg-gray-100",
-                    )}
-                    onClick={() => {
-                      handleDocumentSelectClick(
-                        file.id!,
-                        file.mimeType!,
-                        file.name!,
-                      );
-                    }}
-                  >
-                    {getIconFromMimeType({ mimeType: file.mimeType })}
-                    <p>{file.name}</p>
-                  </button>
-                ))
+              ? data.map((file) => {
+                  const isAllowed = SELECTABLE_MIME_TYPES.includes(
+                    file.mimeType!,
+                  );
+                  return (
+                    <button
+                      key={file.id}
+                      className={clsx(
+                        "flex gap-4 rounded border-2 p-2",
+                        isAllowed ? "border-gray-600 text-gray-600" : null,
+                        selectedFile === file.id
+                          ? "border-2 border-blue-600 bg-blue-300"
+                          : "hover:bg-gray-100",
+                      )}
+                      onClick={() => {
+                        handleDocumentSelectClick(
+                          file.id!,
+                          file.mimeType!,
+                          file.name!,
+                        );
+                      }}
+                      disabled={!isAllowed}
+                    >
+                      {getIconFromMimeType({
+                        mimeType: file.mimeType,
+                        isAllowed,
+                      })}
+                      <p>{file.name}</p>
+                    </button>
+                  );
+                })
               : null}
           </div>
         </ScrollArea>
 
         <DialogFooter>
           <DialogClose asChild>
-            <Button
-              disabled={!selectedFile}
-              onClick={() => {
-                if (selectedFile) {
-                  onSaveClick({
-                    folderId:
-                      folders.length > 2
-                        ? folders[folders.length - 1]!.id!
-                        : null,
-                    templateFileId: selectedFile,
-                  });
-                  return;
-                }
-                throw new Error("No File selected");
-              }}
-            >
+            <Button disabled={!selectedFile} onClick={handleSaveClick}>
               Save
             </Button>
           </DialogClose>
@@ -163,25 +177,32 @@ export default function FileExplorer({
   );
 }
 
-function getIconFromMimeType({ mimeType }: { mimeType?: string | null }) {
+function getIconFromMimeType({
+  mimeType,
+  isAllowed,
+}: {
+  mimeType?: string | null;
+  isAllowed?: boolean;
+}) {
+  const disabled = "stroke-gray-300";
   if (mimeType === "application/vnd.google-apps.folder") {
-    return <Folder className="stroke-gray-600" />;
+    return <Folder className={isAllowed ? "stroke-gray-600" : disabled} />;
   }
 
   if (mimeType === "application/vnd.google-apps.spreadsheet") {
-    return <Sheet className="stroke-green-600" />;
+    return <Sheet className={isAllowed ? "stroke-green-600" : disabled} />;
   }
 
   if (mimeType === "application/vnd.google-apps.document") {
-    return <FileText className="stroke-blue-600" />;
+    return <FileText className={isAllowed ? "stroke-blue-600" : disabled} />;
   }
 
   if (mimeType === "application/vnd.google-apps.presentation") {
-    return <Presentation className="stroke-red-600" />;
+    return <Presentation className={isAllowed ? "stroke-red-600" : disabled} />;
   }
 
   if (mimeType === "application/vnd.google-apps.map") {
-    return <Map className="stroke-gray-600" />;
+    return <Map className={isAllowed ? "stroke-gray-600" : disabled} />;
   }
 
   return <File className="stroke-gray-600" />;

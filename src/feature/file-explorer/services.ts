@@ -1,46 +1,6 @@
 "use server";
 
-import { env } from "@/env";
-import { auth } from "@/server/auth";
-import { google } from "googleapis";
-
-async function getAuthenticatedDocument() {
-  const session = await auth();
-  const clientId = env.GOOGLE_CLIENT_ID;
-  const clientSecret = env.GOOGLE_CLIENT_SECRET;
-  const accessToken = session?.access_token;
-  const refreshToken = session?.refresh_token;
-
-  const oauth = new google.auth.OAuth2({
-    clientId,
-    clientSecret,
-  });
-  oauth.setCredentials({
-    access_token: accessToken,
-    refresh_token: refreshToken,
-  });
-
-  return google.docs({ auth: oauth, version: "v1" });
-}
-
-async function getAuthenticatedDrive() {
-  const session = await auth();
-  const clientId = env.GOOGLE_CLIENT_ID;
-  const clientSecret = env.GOOGLE_CLIENT_SECRET;
-  const accessToken = session?.access_token;
-  const refreshToken = session?.refresh_token;
-
-  const oauth = new google.auth.OAuth2({
-    clientId,
-    clientSecret,
-  });
-  oauth.setCredentials({
-    access_token: accessToken,
-    refresh_token: refreshToken,
-  });
-
-  return google.drive({ auth: oauth, version: "v3" });
-}
+import { getAuthenticatedDocument, getAuthenticatedDrive } from "@/lib/google";
 
 export async function getAllFilesInFolder(folderId?: string) {
   const drive = await getAuthenticatedDrive();
@@ -76,13 +36,23 @@ export async function downloadFile(fileId: string) {
   }
 }
 
-type Config = {
+export type Config = {
   id: string;
   folderId: string | null;
-  defaultTemplateDocId: string;
+  defaultTemplateDocId: string | null;
 };
 
 const CONFIG_FILE_NAME = "config.json";
+
+export async function getOrCreateConfigFile() {
+  const configFile = await getConfigFile();
+
+  if (!configFile) {
+    return await createConfigFile();
+  }
+
+  return configFile;
+}
 
 export async function getConfigFile() {
   const drive = await getAuthenticatedDrive();
@@ -106,32 +76,31 @@ export async function getConfigFile() {
   }
 }
 
-export async function createConfigFile() {
+export async function createConfigFile(): Promise<Config> {
   const drive = await getAuthenticatedDrive();
 
-  try {
-    const res = await drive.files.create({
-      requestBody: {
-        name: CONFIG_FILE_NAME,
-        mimeType: "application/json",
-        parents: ["appDataFolder"],
-      },
-      media: {
-        mimeType: "application/json",
-        body: JSON.stringify({
-          folderId: null,
-          defaultTemplateDocId: "",
-        }),
-      },
-    });
+  const res = await drive.files.create({
+    requestBody: {
+      name: CONFIG_FILE_NAME,
+      mimeType: "application/json",
+      parents: ["appDataFolder"],
+    },
+    media: {
+      mimeType: "application/json",
+      body: JSON.stringify({
+        folderId: null,
+        defaultTemplateDocId: "",
+      }),
+    },
+  });
 
-    return res.data;
-  } catch (error) {
-    console.error(error);
-  }
+  return { id: res.data.id!, folderId: null, defaultTemplateDocId: null };
 }
 
-export async function getFileById(fileId: string) {
+export async function getFileById(fileId: string | null) {
+  if (!fileId) {
+    return null;
+  }
   const drive = await getAuthenticatedDrive();
 
   try {
