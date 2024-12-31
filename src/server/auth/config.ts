@@ -14,33 +14,12 @@ declare module "next-auth" {
   /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
 }
 declare module "next-auth" {
-  //   interface CustomUser extends User {
-  //     access_token: string;
-  //     refresh_token: string;
-  //   }
-
   interface JWT {
     access_token: string;
     expires_at: number;
     refresh_token?: string;
     error?: "RefreshTokenError";
   }
-
-  //   interface Session extends DefaultSession {
-  //     access_token: string;
-  //     refresh_token: string;
-  //     user: {
-  //       id: string;
-
-  //       // ...other properties
-  //       // role: UserRole;
-  //     } & CustomUser;
-  //   }
-
-  // interface User {
-  //   // ...other properties
-  //   // role: UserRole;
-  // }
 }
 
 declare module "next-auth" {
@@ -50,15 +29,6 @@ declare module "next-auth" {
     error?: "RefreshTokenError";
   }
 }
-
-// declare module "next-auth/jwt" {
-//   interface JWT {
-//     access_token: string;
-//     expires_at: number;
-//     refresh_token?: string;
-//     error?: "RefreshTokenError";
-//   }
-// }
 
 const scopes = [
   "/auth/documents",
