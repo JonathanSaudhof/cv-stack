@@ -1,18 +1,24 @@
-import { createNewFolder, getAuthenticatedDrive } from "@/lib/google";
+import { createNewFolder, getAuthenticatedDrive } from "@/lib/google/drive";
 import { auth } from "@/server/auth";
+import {
+  ApplicationSchema,
+  type CreateApplication,
+  type Application,
+} from "./schema";
+import spreadsheetService from "@/lib/google/spreadsheet";
 
 const createNewApplication = async ({
-  companyName,
+  data,
   templateDocId,
   baseFolderId,
 }: {
-  companyName: string;
+  data: CreateApplication;
   templateDocId: string;
   baseFolderId: string | null;
-}) => {
+}): Promise<Application | null> => {
   try {
     const session = await auth();
-    const folderId = await createNewFolder(companyName, baseFolderId);
+    const folderId = await createNewFolder(data.companyName, baseFolderId);
 
     if (!folderId) {
       throw new Error("Failed to create folder");
@@ -21,14 +27,23 @@ const createNewApplication = async ({
     const templateId = await copyTemplateDocument({
       templateDocId,
       folderId,
-      documentName: `CV_${session.user?.name?.replace(" ", "_")}_${companyName}`,
+      documentName: `CV_${session.user?.name?.replace(" ", "_")}_${new Date().toISOString()}`,
     });
 
     if (!templateId) {
       throw new Error("Failed to copy template document");
     }
 
-    return templateId;
+    await createMetadataSheet({
+      folderId,
+      jobTitle: data.jobTitle,
+      jobDescriptionUrl: data.jobDescriptionUrl,
+    });
+
+    return ApplicationSchema.parse({
+      ...data,
+      folderId,
+    });
   } catch (error) {
     console.error(error);
     return null;
@@ -57,39 +72,52 @@ async function copyTemplateDocument({
   return document.data.id;
 }
 
-enum ApplicationStageTitle {
-  PENDING = "PENDING",
-  INTERVIEW = "INTERVIEW",
-  REJECTED = "REJECTED",
-  OFFER = "OFFER",
+////////////// Metadata Sheet //////////////
+async function createMetadataSheet({
+  folderId,
+  jobTitle,
+  jobDescriptionUrl,
+}: {
+  folderId: string;
+  jobTitle: string;
+  jobDescriptionUrl: string;
+}) {
+  const sheetName = "metadata";
+  const spreadsheetId = await spreadsheetService.createSpreadSheet(
+    sheetName,
+    folderId,
+  );
+
+  if (!spreadsheetId) {
+    throw new Error("Failed to create metadata sheet");
+  }
+
+  await createOverviewTable(spreadsheetId, { jobTitle, jobDescriptionUrl });
 }
 
-type ApplicationStage = {
-  title: ApplicationStageTitle;
-  createdAt: Date;
-  updatedAt: Date;
-};
+async function createOverviewTable(
+  spreadSheetId: string,
+  data: { jobDescriptionUrl: string; jobTitle: string },
+) {
+  const OVERVIEW_SHEET_NAME = "overview";
+  const columns = ["link", "title"];
 
-type ApplicationMetaData = {
-  stages: string;
-};
-
-async function createMetaDataFile(folderId: string, status: string) {
-  const drive = await getAuthenticatedDrive();
-
-  const file = await drive.files.create({
-    requestBody: {
-      name: "status.json",
-      mimeType: "application/json",
-      parents: [folderId],
-    },
-    media: {
-      mimeType: "application/json",
-      body: JSON.stringify({ status }),
-    },
+  const table = await spreadsheetService.createTable({
+    spreadSheetId,
+    title: OVERVIEW_SHEET_NAME,
+    columns,
   });
 
-  return file.data.id;
+  if (!table) {
+    throw new Error("Failed to create overview table");
+  }
+
+  await table.addRows([
+    {
+      link: data.jobDescriptionUrl,
+      title: data.jobTitle,
+    },
+  ]);
 }
 
 async function getAllApplications(folderId: string) {
@@ -108,7 +136,6 @@ async function getAllApplications(folderId: string) {
 const applicationService = {
   createNewApplication,
   copyTemplateDocument,
-  createStatusFile: createMetaDataFile,
   getAllApplications,
 };
 

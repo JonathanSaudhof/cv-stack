@@ -13,13 +13,7 @@ export default async function Home() {
       <main className="">
         <header className="flex justify-between border-b-2 px-8 py-4">
           <h1 className="text-2xl font-semibold">Application Manager</h1>
-          <FileExplorer
-            // onSaveClick={() => {
-            //   "use server";
-            //   return handleSaveClick(config);
-            // }}
-            defaultTemplateId={template?.documentId ?? null}
-          />
+          <FileExplorer defaultTemplateId={template?.documentId ?? null} />
         </header>
         <section className="flex justify-between border-b-2 p-8">
           {template ? (

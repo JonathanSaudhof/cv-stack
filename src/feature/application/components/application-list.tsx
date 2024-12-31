@@ -4,9 +4,9 @@ import { Archive, File, SquareArrowOutUpRight } from "lucide-react";
 
 export default async function ApplicationsList({
   folderId,
-}: {
+}: Readonly<{
   folderId: string;
-}) {
+}>) {
   const applications = await api.applications.getAllApplications({ folderId });
 
   return (

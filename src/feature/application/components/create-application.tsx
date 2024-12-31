@@ -17,20 +17,35 @@ import { useState } from "react";
 
 export default function CreateApplication() {
   const [companyName, setCompanyName] = useState<string>("");
+  const [jobTitle, setJobTitle] = useState<string>("");
+  const [jobDescriptionUrl, setJobDescriptionUrl] = useState<string>("");
   const router = useRouter();
   const { mutate } = api.applications.createApplication.useMutation();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCompanyName(e.target.value);
+    switch (e.target.name) {
+      case "companyName":
+        setCompanyName(e.target.value);
+        break;
+      case "jobTitle":
+        setJobTitle(e.target.value);
+        break;
+      case "jobDescriptionUrl":
+        setJobDescriptionUrl(e.target.value);
+        break;
+    }
   };
 
   const handleSaveClick = () => {
     setCompanyName("");
     mutate(
-      { companyName },
+      { companyName, jobTitle, jobDescriptionUrl },
       {
         onSuccess: () => {
           router.refresh();
+        },
+        onError: (error) => {
+          console.error(error);
         },
       },
     );
@@ -48,6 +63,19 @@ export default function CreateApplication() {
         <Input
           type="text"
           placeholder="Company Name"
+          name="companyName"
+          onChange={handleInputChange}
+        />
+        <Input
+          type="text"
+          placeholder="Job Title"
+          name="jobTitle"
+          onChange={handleInputChange}
+        />
+        <Input
+          type="text"
+          placeholder="Job Description URL"
+          name="jobDescriptionUrl"
           onChange={handleInputChange}
         />
         <DialogFooter>
