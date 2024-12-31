@@ -1,6 +1,6 @@
 "use server";
 
-import { getAuthenticatedDocument, getAuthenticatedDrive } from "@/lib/google";
+import { getAuthenticatedDrive } from "@/lib/google/drive";
 
 export async function getAllFilesInFolder(folderId?: string) {
   const drive = await getAuthenticatedDrive();
@@ -110,21 +110,6 @@ export async function getFileById(fileId: string | null) {
     });
 
     return fileContent.data;
-  } catch (error) {
-    console.error(error);
-    return null;
-  }
-}
-
-export async function getDocumentById(documentId: string) {
-  const document = await getAuthenticatedDocument();
-
-  try {
-    const res = await document.documents.get({
-      documentId,
-    });
-
-    return res.data;
   } catch (error) {
     console.error(error);
     return null;

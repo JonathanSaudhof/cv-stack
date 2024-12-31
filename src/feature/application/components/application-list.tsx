@@ -15,19 +15,19 @@ export default async function ApplicationsList({
       <ul className="flex flex-col gap-2">
         {applications.map((application) => (
           <li
-            key={application.id}
+            key={application.folderId}
             className="flex items-center gap-4 rounded border p-4"
           >
             <div className="flex flex-1 gap-8">
               <div className="flex flex-col gap-1">
                 <p className="text-xs text-gray-300">Company</p>
-                <p>{application.name}</p>
+                <p>{application.companyName}</p>
               </div>
-              <div className="flex w-24 flex-col gap-1">
+              <div className="flex flex-1 flex-col gap-1">
                 <p className="text-xs text-gray-300">Job Title</p>
-                <p>Job Title</p>
+                <p>{application.jobTitle}</p>
               </div>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-1 flex-col gap-1">
                 <p className="text-xs text-gray-300">Status</p>
                 <p>Interview</p>
               </div>

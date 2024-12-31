@@ -1,4 +1,9 @@
-import { createNewFolder, getAuthenticatedDrive } from "@/lib/google/drive";
+import {
+  createNewFolder,
+  getAllFoldersInFolder,
+  getAuthenticatedDrive,
+  getFileInFolderByName,
+} from "@/lib/google/drive";
 import { auth } from "@/server/auth";
 import {
   ApplicationSchema,
@@ -121,22 +126,50 @@ async function createOverviewTable(
 }
 
 async function getAllApplications(folderId: string) {
-  const drive = await getAuthenticatedDrive();
+  const folders = await getAllFoldersInFolder(folderId);
 
-  const folders = await drive.files.list({
-    q: `'${folderId}' in parents`,
-    fields: "files(id, name, mimeType)",
-  });
+  return folders;
+}
 
-  return folders.data.files?.filter(
-    (file) => file.mimeType === "application/vnd.google-apps.folder",
-  );
+type Metadata = {
+  jobDescriptionUrl: string | null;
+  jobTitle: string | null;
+};
+
+async function getMetaDataInFolder(folderId: string): Promise<Metadata> {
+  const file = await getFileInFolderByName(folderId, "metadata");
+  if (!file?.id) {
+    console.error("Metadata file not found in folder: ", folderId);
+    return {
+      jobDescriptionUrl: null,
+      jobTitle: null,
+    };
+  }
+
+  const rows = await spreadsheetService.readTable<{
+    link: string;
+    title: string;
+  }>(file.id, "overview");
+
+  if (!rows.length || !rows) {
+    console.error("Metadata table not found in file: ", file.id);
+    return {
+      jobDescriptionUrl: null,
+      jobTitle: null,
+    };
+  }
+
+  return {
+    jobDescriptionUrl: (rows[0]?.get("link") as string) ?? null,
+    jobTitle: (rows[0]?.get("title") as string) ?? null,
+  };
 }
 
 const applicationService = {
   createNewApplication,
   copyTemplateDocument,
   getAllApplications,
+  getMetaDataInFolder,
 };
 
 export default applicationService;

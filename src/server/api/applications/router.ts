@@ -2,27 +2,31 @@ import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import { getConfigFile } from "@/feature/file-explorer/services";
 import applicationService from "@/feature/application/service";
+import {
+  type Application,
+  CreateApplicationSchema,
+} from "@/feature/application/schema";
 
 export const applicationsRouter = createTRPCRouter({
   createApplication: protectedProcedure
-    .input(
-      z.object({
-        companyName: z.string(),
-      }),
-    )
+    .input(CreateApplicationSchema)
     .mutation(async ({ input }) => {
       const config = await getConfigFile();
+
       if (!config) {
         throw new Error("Config file not found");
       }
+
       if (!config.folderId) {
         throw new Error("Config file is missing folderId");
       }
+
       if (!config.defaultTemplateDocId) {
         throw new Error("Config file is missing defaultTemplateDocId");
       }
+
       await applicationService.createNewApplication({
-        companyName: input.companyName,
+        data: input,
         baseFolderId: config?.folderId,
         templateDocId: config?.defaultTemplateDocId,
       });
@@ -33,14 +37,6 @@ export const applicationsRouter = createTRPCRouter({
         folderId: z.string(),
       }),
     )
-    .output(
-      z.array(
-        z.object({
-          id: z.string(),
-          name: z.string(),
-        }),
-      ),
-    )
     .query(async ({ input }) => {
       const rawApplications = await applicationService.getAllApplications(
         input.folderId,
@@ -49,9 +45,23 @@ export const applicationsRouter = createTRPCRouter({
         return [];
       }
 
-      return rawApplications.map((application) => ({
-        id: application.id ?? "",
-        name: application.name ?? "",
-      }));
+      const metadataFiles = await Promise.all(
+        rawApplications.map((application) =>
+          applicationService.getMetaDataInFolder(application.id!),
+        ),
+      );
+
+      const applications: Application[] = rawApplications.map(
+        (application, index) => {
+          const metadata = metadataFiles[index];
+          return {
+            folderId: application.id!,
+            companyName: application.name ?? "",
+            ...metadata!,
+          };
+        },
+      );
+
+      return applications;
     }),
 });

@@ -8,8 +8,11 @@ export const CreateApplicationSchema = z.object({
 
 export type CreateApplication = z.infer<typeof CreateApplicationSchema>;
 
-export const ApplicationSchema = CreateApplicationSchema.extend({
+export const ApplicationSchema = z.object({
   folderId: z.string(),
+  jobTitle: z.string().nullable(),
+  jobDescriptionUrl: z.string().url().nullable(),
+  companyName: z.string(),
 });
 
 export type Application = z.infer<typeof ApplicationSchema>;

@@ -1,12 +1,11 @@
 import {
-  createConfigFile,
   getConfigFile,
-  getDocumentById,
   getOrCreateConfigFile,
   updateConfigFile,
 } from "@/feature/file-explorer/services";
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
+import { getDocumentById } from "@/lib/google/drive";
 
 export const configRouter = createTRPCRouter({
   getConfigFile: protectedProcedure.query(async () => {
@@ -47,6 +46,7 @@ export const configRouter = createTRPCRouter({
       return null;
     }
 
-    return await getDocumentById(config.defaultTemplateDocId);
+    const document = await getDocumentById(config.defaultTemplateDocId);
+    return document;
   }),
 });
