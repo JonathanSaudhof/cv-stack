@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { api } from "@/trpc/server";
-import { Archive, File, SquareArrowOutUpRight } from "lucide-react";
+import { Archive, File, Link, SquareArrowOutUpRight } from "lucide-react";
 
 export default async function ApplicationsList({
   folderId,
@@ -19,7 +19,7 @@ export default async function ApplicationsList({
             className="flex items-center gap-4 rounded border p-4"
           >
             <div className="flex flex-1 gap-8">
-              <div className="flex flex-col gap-1">
+              <div className="flex w-1/5 flex-col gap-1">
                 <p className="text-xs text-gray-300">Company</p>
                 <p>{application.companyName}</p>
               </div>
@@ -27,12 +27,19 @@ export default async function ApplicationsList({
                 <p className="text-xs text-gray-300">Job Title</p>
                 <p>{application.jobTitle}</p>
               </div>
-              <div className="flex flex-1 flex-col gap-1">
+              <div className="flex w-1/5 flex-col gap-1">
                 <p className="text-xs text-gray-300">Status</p>
                 <p>Interview</p>
               </div>
             </div>
-            <div>
+            <div className="flex w-1/5 justify-end border-l">
+              {application.jobDescriptionUrl ? (
+                <Button variant="ghost" asChild title="Job Description">
+                  <a href={application.jobDescriptionUrl} target="_blank">
+                    <Link />
+                  </a>
+                </Button>
+              ) : null}
               <Button variant="ghost" asChild title="Document's Folder">
                 <a
                   href={`https://drive.google.com/drive/u/1/folders/${application.id}`}
