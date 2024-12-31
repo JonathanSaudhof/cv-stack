@@ -1,0 +1,4175 @@
+{
+  "title": "CV_Jonathan_Saudhof",
+  "body": {
+    "content": [
+      {
+        "endIndex": 1,
+        "sectionBreak": {
+          "sectionStyle": {
+            "columnSeparatorStyle": "NONE",
+            "contentDirection": "LEFT_TO_RIGHT",
+            "marginTop": { "magnitude": 37, "unit": "PT" },
+            "marginBottom": { "magnitude": 14, "unit": "PT" },
+            "marginRight": { "magnitude": 38, "unit": "PT" },
+            "marginLeft": { "magnitude": 37, "unit": "PT" },
+            "marginHeader": { "magnitude": 18, "unit": "PT" },
+            "marginFooter": { "magnitude": 18, "unit": "PT" },
+            "sectionType": "CONTINUOUS"
+          }
+        }
+      },
+      {
+        "startIndex": 1,
+        "endIndex": 39,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1,
+              "endIndex": 39,
+              "textRun": {
+                "content": " Jonathan Saudhof - Software Engineer\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.kj85bpesbpf6",
+            "namedStyleType": "TITLE",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT"
+          },
+          "positionedObjectIds": ["kix.ymeu4y1kv3ai"]
+        }
+      },
+      {
+        "startIndex": 39,
+        "endIndex": 123,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 39,
+              "endIndex": 40,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            },
+            {
+              "startIndex": 40,
+              "endIndex": 58,
+              "textRun": {
+                "content": "Berlin, Germany | ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 58,
+              "endIndex": 66,
+              "textRun": {
+                "content": "LinkedIn",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.0627451,
+                        "green": 0.32941177,
+                        "blue": 0.8
+                      }
+                    }
+                  },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE",
+                  "link": {
+                    "url": "https://www.linkedin.com/in/JonathanSaudhof"
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 66,
+              "endIndex": 67,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.0627451,
+                        "green": 0.32941177,
+                        "blue": 0.8
+                      }
+                    }
+                  },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 67,
+              "endIndex": 68,
+              "textRun": {
+                "content": "|",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 68,
+              "endIndex": 69,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.06666667,
+                        "green": 0.33333334,
+                        "blue": 0.8
+                      }
+                    }
+                  },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE",
+                  "link": { "url": "mailto:jonathan.saudhof@gmail.com" }
+                }
+              }
+            },
+            {
+              "startIndex": 69,
+              "endIndex": 95,
+              "textRun": {
+                "content": "jonathan.saudhof@gmail.com",
+                "textStyle": {
+                  "underline": true,
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.06666667,
+                        "green": 0.33333334,
+                        "blue": 0.8
+                      }
+                    }
+                  },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "link": { "url": "mailto:jonathan.saudhof@gmail.com" }
+                }
+              }
+            },
+            {
+              "startIndex": 95,
+              "endIndex": 96,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": {
+                    "color": {
+                      "rgbColor": {
+                        "red": 0.0627451,
+                        "green": 0.32941177,
+                        "blue": 0.8
+                      }
+                    }
+                  },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 96,
+              "endIndex": 121,
+              "textRun": {
+                "content": "| +49 - (0) 176 31 21 596",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 121,
+              "endIndex": 123,
+              "textRun": {
+                "content": "0\n",
+                "textStyle": {
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "magnitude": 0.6, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 123,
+        "endIndex": 125,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 123,
+              "endIndex": 124,
+              "horizontalRule": {
+                "textStyle": {
+                  "fontSize": { "magnitude": 6, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Lucida Sans",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 124,
+              "endIndex": 125,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "fontSize": { "magnitude": 6, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.stvjdp4g38vw",
+            "namedStyleType": "HEADING_1",
+            "alignment": "START",
+            "lineSpacing": 100,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" },
+            "indentEnd": { "magnitude": 10.45, "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 125,
+        "endIndex": 179,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 125,
+              "endIndex": 126,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 126,
+              "endIndex": 154,
+              "textRun": {
+                "content": "TypeScript | ReactJS | Node ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 154,
+              "endIndex": 155,
+              "textRun": {
+                "content": "|",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 200
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 155,
+              "endIndex": 156,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 156,
+              "endIndex": 178,
+              "textRun": {
+                "content": "C# | Go | Docker | GCP",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 200
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 178,
+              "endIndex": 179,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "fontSize": { "magnitude": 6, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 200
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.rmapcy747eu0",
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "unit": "PT" },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" }
+          }
+        }
+      },
+      {
+        "startIndex": 179,
+        "endIndex": 709,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 179,
+              "endIndex": 194,
+              "textRun": { "content": "\u000bFriendly and e", "textStyle": {} }
+            },
+            {
+              "startIndex": 194,
+              "endIndex": 253,
+              "textRun": {
+                "content": "xperienced software engineer with 4 years of experience in ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 253,
+              "endIndex": 279,
+              "textRun": {
+                "content": "full-stack web development",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 279,
+              "endIndex": 280,
+              "textRun": { "content": ".", "textStyle": {} }
+            },
+            {
+              "startIndex": 280,
+              "endIndex": 328,
+              "textRun": {
+                "content": " I have had the opportunity to work on multiple ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 328,
+              "endIndex": 351,
+              "textRun": {
+                "content": "agile and international",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 351,
+              "endIndex": 485,
+              "textRun": {
+                "content": " projects using a diverse technology stack. As a motivated and social colleague, I enjoy working in teams with a strong commitment to ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 485,
+              "endIndex": 525,
+              "textRun": {
+                "content": "proactivity, honesty, and supportiveness",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 525,
+              "endIndex": 709,
+              "textRun": {
+                "content": ". My main driver is learning more about every aspect of web development and new technologies to bring value to customers and users. Solving complicated problems is something my brain \n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "lineSpacing": 100,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "unit": "PT" }
+          }
+        }
+      },
+      {
+        "startIndex": 709,
+        "endIndex": 733,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 709,
+              "endIndex": 733,
+              "textRun": {
+                "content": "Professional Experience\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.9o1ynzeytbzl",
+            "namedStyleType": "HEADING_1",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "magnitude": 11.1, "unit": "PT" }
+          }
+        }
+      },
+      {
+        "startIndex": 733,
+        "endIndex": 800,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 733,
+              "endIndex": 750,
+              "textRun": {
+                "content": "Software Engineer",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 750,
+              "endIndex": 751,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 751,
+              "endIndex": 762,
+              "textRun": {
+                "content": "@ adesso SE",
+                "textStyle": { "baselineOffset": "NONE" }
+              }
+            },
+            {
+              "startIndex": 762,
+              "endIndex": 782,
+              "textRun": { "content": " - Google Cloud Team", "textStyle": {} }
+            },
+            {
+              "startIndex": 782,
+              "endIndex": 786,
+              "textRun": {
+                "content": "\t   ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 786,
+              "endIndex": 800,
+              "textRun": {
+                "content": "09/21 – today\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "direction": "LEFT_TO_RIGHT",
+            "tabStops": [
+              {
+                "offset": { "magnitude": 431.75, "unit": "PT" },
+                "alignment": "START"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "startIndex": 800,
+        "endIndex": 964,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 800,
+              "endIndex": 905,
+              "textRun": {
+                "content": "Worked on different smaller Projects like Ai Chatbots and Search, as well as Release Manager PoC,  using ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 905,
+              "endIndex": 910,
+              "textRun": {
+                "content": "React",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 910,
+              "endIndex": 912,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 912,
+              "endIndex": 922,
+              "textRun": {
+                "content": "Tailwind, ",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 922,
+              "endIndex": 923,
+              "textRun": { "content": " ", "textStyle": {} }
+            },
+            {
+              "startIndex": 923,
+              "endIndex": 930,
+              "textRun": {
+                "content": "NextJS,",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 930,
+              "endIndex": 931,
+              "textRun": { "content": " ", "textStyle": {} }
+            },
+            {
+              "startIndex": 931,
+              "endIndex": 941,
+              "textRun": {
+                "content": "TypeScript",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 941,
+              "endIndex": 943,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 943,
+              "endIndex": 963,
+              "textRun": {
+                "content": "Go, Python FastApi; ",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 963,
+              "endIndex": 964,
+              "textRun": { "content": "\n", "textStyle": {} }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.qtfj5x2zim58",
+            "textStyle": {
+              "italic": false,
+              "strikethrough": false,
+              "smallCaps": false,
+              "backgroundColor": {},
+              "foregroundColor": { "color": { "rgbColor": {} } },
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "baselineOffset": "NONE"
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 964,
+        "endIndex": 1122,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 964,
+              "endIndex": 975,
+              "textRun": { "content": "Developed 2", "textStyle": {} }
+            },
+            {
+              "startIndex": 975,
+              "endIndex": 987,
+              "textRun": {
+                "content": " monolithic ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 987,
+              "endIndex": 995,
+              "textRun": { "content": "web apps", "textStyle": {} }
+            },
+            {
+              "startIndex": 995,
+              "endIndex": 1072,
+              "textRun": {
+                "content": " for a big energy producer to manage wind park maintenance for 2+ years with ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1072,
+              "endIndex": 1083,
+              "textRun": {
+                "content": "TypeScript,",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1083,
+              "endIndex": 1084,
+              "textRun": { "content": " ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1084,
+              "endIndex": 1090,
+              "textRun": {
+                "content": "NextJS",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1090,
+              "endIndex": 1092,
+              "textRun": {
+                "content": ", ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1092,
+              "endIndex": 1094,
+              "textRun": {
+                "content": "C#",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1094,
+              "endIndex": 1096,
+              "textRun": {
+                "content": ", ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1096,
+              "endIndex": 1105,
+              "textRun": {
+                "content": ".NET Core",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1105,
+              "endIndex": 1107,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1107,
+              "endIndex": 1112,
+              "textRun": {
+                "content": "Redis",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1112,
+              "endIndex": 1114,
+              "textRun": {
+                "content": ", ",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1114,
+              "endIndex": 1121,
+              "textRun": {
+                "content": "Grafana",
+                "textStyle": {
+                  "italic": false,
+                  "underline": true,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            },
+            {
+              "startIndex": 1121,
+              "endIndex": 1122,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.qtfj5x2zim58",
+            "textStyle": {
+              "italic": false,
+              "strikethrough": false,
+              "smallCaps": false,
+              "backgroundColor": {},
+              "foregroundColor": { "color": { "rgbColor": {} } },
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "baselineOffset": "NONE"
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 1122,
+        "endIndex": 1308,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1122,
+              "endIndex": 1233,
+              "textRun": {
+                "content": "Built a web platform POC for analyzing scraped data from municipality websites for a big energy producer using ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 1233,
+              "endIndex": 1246,
+              "textRun": {
+                "content": "React, NextJS",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1246,
+              "endIndex": 1248,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1248,
+              "endIndex": 1256,
+              "textRun": {
+                "content": "Node JS,",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1256,
+              "endIndex": 1257,
+              "textRun": { "content": " ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1257,
+              "endIndex": 1264,
+              "textRun": {
+                "content": "Express",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1264,
+              "endIndex": 1266,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1266,
+              "endIndex": 1281,
+              "textRun": {
+                "content": "NoSQL Firestore",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1281,
+              "endIndex": 1295,
+              "textRun": { "content": ", deployed to ", "textStyle": {} }
+            },
+            {
+              "startIndex": 1295,
+              "endIndex": 1308,
+              "textRun": {
+                "content": "Google Cloud\n",
+                "textStyle": { "underline": true }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": { "listId": "kix.qtfj5x2zim58", "textStyle": {} }
+        }
+      },
+      {
+        "startIndex": 1308,
+        "endIndex": 1522,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1308,
+              "endIndex": 1521,
+              "textRun": {
+                "content": "Proud of being recognized as an invaluable team member, blending strong technical competence and quick comprehension with exceptional interpersonal skills, contributing significantly to a positive work environment",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 1521,
+              "endIndex": 1522,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "bold": true,
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": { "listId": "kix.qtfj5x2zim58", "textStyle": {} }
+        }
+      },
+      {
+        "startIndex": 1522,
+        "endIndex": 1569,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1522,
+              "endIndex": 1540,
+              "textRun": {
+                "content": "Software Engineer ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 1540,
+              "endIndex": 1551,
+              "textRun": { "content": "@ Freelance", "textStyle": {} }
+            },
+            {
+              "startIndex": 1551,
+              "endIndex": 1569,
+              "textRun": {
+                "content": "\t   09/22 – 12/23\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "direction": "LEFT_TO_RIGHT",
+            "tabStops": [
+              {
+                "offset": { "magnitude": 431.75, "unit": "PT" },
+                "alignment": "START"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "startIndex": 1569,
+        "endIndex": 1649,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1569,
+              "endIndex": 1610,
+              "textRun": {
+                "content": "Helped 2 clients with major redesigns of ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 1610,
+              "endIndex": 1615,
+              "textRun": {
+                "content": "React",
+                "textStyle": { "underline": true }
+              }
+            },
+            {
+              "startIndex": 1615,
+              "endIndex": 1649,
+              "textRun": {
+                "content": " frontends for marketing purposes\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": { "listId": "kix.qtfj5x2zim58", "textStyle": {} }
+        }
+      },
+      {
+        "startIndex": 1649,
+        "endIndex": 1786,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1649,
+              "endIndex": 1786,
+              "textRun": {
+                "content": "Partnered with UI designers to create and deploy a suite of interactive components, elevating user engagement and website functionality.\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": { "listId": "kix.qtfj5x2zim58", "textStyle": {} }
+        }
+      },
+      {
+        "startIndex": 1786,
+        "endIndex": 1878,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1786,
+              "endIndex": 1877,
+              "textRun": {
+                "content": "Proud of recurrently being trusted to be the right person to jump in when shit hits the fan",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 1877,
+              "endIndex": 1878,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 11.15, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": { "listId": "kix.qtfj5x2zim58", "textStyle": {} }
+        }
+      },
+      {
+        "startIndex": 1878,
+        "endIndex": 1936,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1878,
+              "endIndex": 1903,
+              "textRun": {
+                "content": "Junior Software Engineer ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 1903,
+              "endIndex": 1917,
+              "textRun": { "content": "@ prepend GmbH", "textStyle": {} }
+            },
+            {
+              "startIndex": 1917,
+              "endIndex": 1936,
+              "textRun": {
+                "content": "\t    10/20 – 06/21\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 100,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "magnitude": 6.15, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" },
+            "indentEnd": { "magnitude": 10.45, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 431.75, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 1936,
+        "endIndex": 2104,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 1936,
+              "endIndex": 2007,
+              "textRun": {
+                "content": "Engineered a custom full-stack application for a consulting firm using ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 2007,
+              "endIndex": 2032,
+              "textRun": {
+                "content": "PHP Laravel with Livewire",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 2032,
+              "endIndex": 2034,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 2034,
+              "endIndex": 2045,
+              "textRun": { "content": "TailwindCSS", "textStyle": {} }
+            },
+            {
+              "startIndex": 2045,
+              "endIndex": 2051,
+              "textRun": { "content": ", and ", "textStyle": {} }
+            },
+            {
+              "startIndex": 2051,
+              "endIndex": 2060,
+              "textRun": { "content": "Alpine JS", "textStyle": {} }
+            },
+            {
+              "startIndex": 2060,
+              "endIndex": 2104,
+              "textRun": {
+                "content": " to improve their change management program\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.35, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 25, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "italic": false,
+              "underline": false,
+              "strikethrough": false,
+              "smallCaps": false,
+              "backgroundColor": {},
+              "foregroundColor": { "color": { "rgbColor": {} } },
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 },
+              "baselineOffset": "NONE"
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2104,
+        "endIndex": 2285,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2104,
+              "endIndex": 2268,
+              "textRun": {
+                "content": "Built a web app for a leading semiconductor company's digital fair presence, enhancing customer interaction and brand visibility in a competitive marketplace using ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 2268,
+              "endIndex": 2273,
+              "textRun": { "content": "React", "textStyle": {} }
+            },
+            {
+              "startIndex": 2273,
+              "endIndex": 2278,
+              "textRun": { "content": " and ", "textStyle": {} }
+            },
+            {
+              "startIndex": 2278,
+              "endIndex": 2284,
+              "textRun": { "content": "NextJS", "textStyle": {} }
+            },
+            {
+              "startIndex": 2284,
+              "endIndex": 2285,
+              "textRun": { "content": "\n", "textStyle": {} }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.15, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 6.85, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "italic": false,
+              "underline": false,
+              "strikethrough": false,
+              "smallCaps": false,
+              "backgroundColor": {},
+              "foregroundColor": { "color": { "rgbColor": {} } },
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 },
+              "baselineOffset": "NONE"
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2285,
+        "endIndex": 2466,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2285,
+              "endIndex": 2446,
+              "textRun": {
+                "content": "Worked on 2 websites with a high focus on search engine optimization for marketing initiatives, significantly improving web visibility and user acquisition with ",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 2446,
+              "endIndex": 2451,
+              "textRun": { "content": "React", "textStyle": {} }
+            },
+            {
+              "startIndex": 2451,
+              "endIndex": 2456,
+              "textRun": { "content": " and ", "textStyle": {} }
+            },
+            {
+              "startIndex": 2456,
+              "endIndex": 2464,
+              "textRun": { "content": "GatsbyJS", "textStyle": {} }
+            },
+            {
+              "startIndex": 2464,
+              "endIndex": 2465,
+              "textRun": { "content": ".", "textStyle": {} }
+            },
+            {
+              "startIndex": 2465,
+              "endIndex": 2466,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.15, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 26.9, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "italic": false,
+              "underline": false,
+              "strikethrough": false,
+              "smallCaps": false,
+              "backgroundColor": {},
+              "foregroundColor": { "color": { "rgbColor": {} } },
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 },
+              "baselineOffset": "NONE"
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2466,
+        "endIndex": 2485,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2466,
+              "endIndex": 2485,
+              "textRun": {
+                "content": "Further Experience\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.3eeidclqy269",
+            "namedStyleType": "HEADING_1",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "magnitude": 11.1, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 5.5, "unit": "PT" },
+            "indentEnd": { "magnitude": 10.45, "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 2485,
+        "endIndex": 2564,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2485,
+              "endIndex": 2525,
+              "textRun": {
+                "content": "Online Marketing Manager (Performance) @",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2525,
+              "endIndex": 2526,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2526,
+              "endIndex": 2550,
+              "textRun": {
+                "content": "Schubkraft Digital GmbH\t",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2550,
+              "endIndex": 2563,
+              "textRun": {
+                "content": "09/18 – 12/19",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2563,
+              "endIndex": 2564,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "magnitude": 3.6, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 449.75, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 2564,
+        "endIndex": 2686,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2564,
+              "endIndex": 2686,
+              "textRun": {
+                "content": "Held responsibility for a 5-figure monthly marketing budget, entrusted with its strategic allocation to maximize profits.\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.35, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 25, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2686,
+        "endIndex": 2743,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2686,
+              "endIndex": 2742,
+              "textRun": {
+                "content": "Designed and implemented business processes from scratch",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 2742,
+              "endIndex": 2743,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.35, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 25, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2743,
+        "endIndex": 2825,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2743,
+              "endIndex": 2786,
+              "textRun": {
+                "content": "Research Assistant and Startup Consultant @",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2786,
+              "endIndex": 2787,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2787,
+              "endIndex": 2811,
+              "textRun": {
+                "content": "BTU Cottbus-Senftenberg\t",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2811,
+              "endIndex": 2825,
+              "textRun": {
+                "content": "09/14 – 12/17\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "magnitude": 3.6, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" },
+            "indentEnd": { "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 449.75, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 2825,
+        "endIndex": 2922,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2825,
+              "endIndex": 2922,
+              "textRun": {
+                "content": "Hosted entrepreneurship seminars on Lean Startup and user-driven innovation in different formats\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "COLLAPSE_LISTS",
+            "spaceAbove": { "magnitude": 0.15, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "magnitude": 21.259842519685044, "unit": "PT" },
+            "indentEnd": { "magnitude": 6.85, "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 26.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          },
+          "bullet": {
+            "listId": "kix.k5h8ec5q62lc",
+            "textStyle": {
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+            }
+          }
+        }
+      },
+      {
+        "startIndex": 2922,
+        "endIndex": 2923,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2922,
+              "endIndex": 2923,
+              "textRun": { "content": "\n", "textStyle": {} }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.lcody5x0ipd4",
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      },
+      {
+        "startIndex": 2923,
+        "endIndex": 2924,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2923,
+              "endIndex": 2924,
+              "textRun": { "content": "\n", "textStyle": {} }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.24289wydwvz3",
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      },
+      {
+        "startIndex": 2924,
+        "endIndex": 2925,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2924,
+              "endIndex": 2925,
+              "textRun": { "content": "\n", "textStyle": {} }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.jgu4pze80egq",
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      },
+      {
+        "startIndex": 2925,
+        "endIndex": 2935,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2925,
+              "endIndex": 2934,
+              "textRun": {
+                "content": "Education",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2934,
+              "endIndex": 2935,
+              "textRun": {
+                "content": "\n",
+                "textStyle": { "fontSize": { "magnitude": 10, "unit": "PT" } }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "headingId": "h.djhdul5i85hf",
+            "namedStyleType": "HEADING_1",
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      },
+      {
+        "startIndex": 2935,
+        "endIndex": 2985,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2935,
+              "endIndex": 2953,
+              "textRun": {
+                "content": "WebDev Bootcamp @ ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2953,
+              "endIndex": 2971,
+              "textRun": {
+                "content": "Ironhack (Berlin)\t",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 2971,
+              "endIndex": 2985,
+              "textRun": {
+                "content": "01/20 – 03/20\n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "magnitude": 3.6, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" },
+            "indentEnd": { "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 446, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 2985,
+        "endIndex": 3068,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 2985,
+              "endIndex": 3068,
+              "textRun": {
+                "content": "In-depth full-time boot camp covering front- & backend web development in English.\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 3068,
+        "endIndex": 3126,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3068,
+              "endIndex": 3072,
+              "textRun": { "content": "HTML", "textStyle": {} }
+            },
+            {
+              "startIndex": 3072,
+              "endIndex": 3075,
+              "textRun": { "content": " , ", "textStyle": {} }
+            },
+            {
+              "startIndex": 3075,
+              "endIndex": 3078,
+              "textRun": { "content": "CSS", "textStyle": {} }
+            },
+            {
+              "startIndex": 3078,
+              "endIndex": 3081,
+              "textRun": { "content": " & ", "textStyle": {} }
+            },
+            {
+              "startIndex": 3081,
+              "endIndex": 3099,
+              "textRun": { "content": "Vanilla Javascript", "textStyle": {} }
+            },
+            {
+              "startIndex": 3099,
+              "endIndex": 3101,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 3101,
+              "endIndex": 3107,
+              "textRun": { "content": "NodeJS", "textStyle": {} }
+            },
+            {
+              "startIndex": 3107,
+              "endIndex": 3109,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 3109,
+              "endIndex": 3116,
+              "textRun": { "content": "MongoDB", "textStyle": {} }
+            },
+            {
+              "startIndex": 3116,
+              "endIndex": 3118,
+              "textRun": { "content": ", ", "textStyle": {} }
+            },
+            {
+              "startIndex": 3118,
+              "endIndex": 3125,
+              "textRun": { "content": "ReactJS", "textStyle": {} }
+            },
+            {
+              "startIndex": 3125,
+              "endIndex": 3126,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "magnitude": 0.4, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 3126,
+        "endIndex": 3127,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3126,
+              "endIndex": 3127,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "magnitude": 0.75, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 3127,
+        "endIndex": 3222,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3127,
+              "endIndex": 3163,
+              "textRun": {
+                "content": "Industrial Engineering, Dipl.-Ing. @",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3163,
+              "endIndex": 3164,
+              "textRun": {
+                "content": " ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3164,
+              "endIndex": 3187,
+              "textRun": {
+                "content": "BTU Cottbus-Senftenberg",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3187,
+              "endIndex": 3207,
+              "textRun": {
+                "content": "               \t    ",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3207,
+              "endIndex": 3220,
+              "textRun": {
+                "content": "10/06 – 09/14",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3220,
+              "endIndex": 3222,
+              "textRun": {
+                "content": " \n",
+                "textStyle": {
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 500
+                  }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spacingMode": "NEVER_COLLAPSE",
+            "spaceAbove": { "magnitude": 3.6, "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentFirstLine": { "unit": "PT" },
+            "indentStart": { "unit": "PT" },
+            "indentEnd": { "unit": "PT" },
+            "tabStops": [
+              {
+                "offset": { "magnitude": 438.5, "unit": "PT" },
+                "alignment": "START"
+              }
+            ],
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 3222,
+        "endIndex": 3351,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3222,
+              "endIndex": 3350,
+              "textRun": {
+                "content": "Subjects: marketing (market research, service marketing), controlling, production technology, automatization, quality management",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 3350,
+              "endIndex": 3351,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 10, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "alignment": "START",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "spaceAbove": { "unit": "PT" },
+            "spaceBelow": { "unit": "PT" },
+            "borderBetween": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderTop": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderBottom": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderLeft": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "borderRight": {
+              "color": {},
+              "width": { "unit": "PT" },
+              "padding": { "unit": "PT" },
+              "dashStyle": "SOLID"
+            },
+            "indentEnd": { "unit": "PT" },
+            "keepLinesTogether": false,
+            "keepWithNext": false,
+            "avoidWidowAndOrphan": false,
+            "shading": { "backgroundColor": {} },
+            "pageBreakBefore": false
+          }
+        }
+      },
+      {
+        "startIndex": 3351,
+        "endIndex": 3361,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3351,
+              "endIndex": 3360,
+              "textRun": {
+                "content": "Languages",
+                "textStyle": {
+                  "fontSize": { "magnitude": 12, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Poppins",
+                    "weight": 400
+                  }
+                }
+              }
+            },
+            {
+              "startIndex": 3360,
+              "endIndex": 3361,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "fontSize": { "magnitude": 8, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT",
+            "indentStart": { "unit": "PT" }
+          }
+        }
+      },
+      {
+        "startIndex": 3361,
+        "endIndex": 3393,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3361,
+              "endIndex": 3393,
+              "textRun": {
+                "content": "🇩🇪 German: Native proficiency\n",
+                "textStyle": {}
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      },
+      {
+        "startIndex": 3393,
+        "endIndex": 3437,
+        "paragraph": {
+          "elements": [
+            {
+              "startIndex": 3393,
+              "endIndex": 3398,
+              "textRun": {
+                "content": "🇬🇧 ",
+                "textStyle": {
+                  "fontSize": { "magnitude": 11, "unit": "PT" },
+                  "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+                }
+              }
+            },
+            {
+              "startIndex": 3398,
+              "endIndex": 3436,
+              "textRun": {
+                "content": "English: Full professional proficiency",
+                "textStyle": {}
+              }
+            },
+            {
+              "startIndex": 3436,
+              "endIndex": 3437,
+              "textRun": {
+                "content": "\n",
+                "textStyle": {
+                  "italic": false,
+                  "underline": false,
+                  "strikethrough": false,
+                  "smallCaps": false,
+                  "backgroundColor": {},
+                  "foregroundColor": { "color": { "rgbColor": {} } },
+                  "fontSize": { "magnitude": 11, "unit": "PT" },
+                  "weightedFontFamily": {
+                    "fontFamily": "Arial",
+                    "weight": 400
+                  },
+                  "baselineOffset": "NONE"
+                }
+              }
+            }
+          ],
+          "paragraphStyle": {
+            "namedStyleType": "NORMAL_TEXT",
+            "lineSpacing": 115,
+            "direction": "LEFT_TO_RIGHT"
+          }
+        }
+      }
+    ]
+  },
+  "documentStyle": {
+    "background": { "color": {} },
+    "pageNumberStart": 1,
+    "marginTop": { "magnitude": 72, "unit": "PT" },
+    "marginBottom": { "magnitude": 72, "unit": "PT" },
+    "marginRight": { "magnitude": 72, "unit": "PT" },
+    "marginLeft": { "magnitude": 72, "unit": "PT" },
+    "pageSize": {
+      "height": { "magnitude": 841.8897637795277, "unit": "PT" },
+      "width": { "magnitude": 595.2755905511812, "unit": "PT" }
+    },
+    "marginHeader": { "magnitude": 36, "unit": "PT" },
+    "marginFooter": { "magnitude": 36, "unit": "PT" },
+    "useCustomHeaderFooterMargins": true
+  },
+  "namedStyles": {
+    "styles": [
+      {
+        "namedStyleType": "NORMAL_TEXT",
+        "textStyle": {
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "strikethrough": false,
+          "smallCaps": false,
+          "backgroundColor": {},
+          "foregroundColor": { "color": { "rgbColor": {} } },
+          "fontSize": { "magnitude": 10, "unit": "PT" },
+          "weightedFontFamily": { "fontFamily": "Poppins", "weight": 300 },
+          "baselineOffset": "NONE"
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "alignment": "START",
+          "lineSpacing": 100,
+          "direction": "LEFT_TO_RIGHT",
+          "spacingMode": "NEVER_COLLAPSE",
+          "spaceAbove": { "magnitude": 6.15, "unit": "PT" },
+          "spaceBelow": { "unit": "PT" },
+          "borderBetween": {
+            "color": {},
+            "width": { "unit": "PT" },
+            "padding": { "unit": "PT" },
+            "dashStyle": "SOLID"
+          },
+          "borderTop": {
+            "color": {},
+            "width": { "unit": "PT" },
+            "padding": { "unit": "PT" },
+            "dashStyle": "SOLID"
+          },
+          "borderBottom": {
+            "color": {},
+            "width": { "unit": "PT" },
+            "padding": { "unit": "PT" },
+            "dashStyle": "SOLID"
+          },
+          "borderLeft": {
+            "color": {},
+            "width": { "unit": "PT" },
+            "padding": { "unit": "PT" },
+            "dashStyle": "SOLID"
+          },
+          "borderRight": {
+            "color": {},
+            "width": { "unit": "PT" },
+            "padding": { "unit": "PT" },
+            "dashStyle": "SOLID"
+          },
+          "indentFirstLine": { "unit": "PT" },
+          "indentStart": { "unit": "PT" },
+          "indentEnd": { "magnitude": 10.45, "unit": "PT" },
+          "keepLinesTogether": false,
+          "keepWithNext": false,
+          "avoidWidowAndOrphan": false,
+          "shading": { "backgroundColor": {} },
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "HEADING_1",
+        "textStyle": {
+          "fontSize": { "magnitude": 12, "unit": "PT" },
+          "weightedFontFamily": { "fontFamily": "Lucida Sans", "weight": 400 }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "indentStart": { "magnitude": 5.5, "unit": "PT" }
+        }
+      },
+      {
+        "namedStyleType": "HEADING_2",
+        "textStyle": {
+          "bold": true,
+          "fontSize": { "magnitude": 18, "unit": "PT" }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 18, "unit": "PT" },
+          "spaceBelow": { "magnitude": 4, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "HEADING_3",
+        "textStyle": {
+          "bold": true,
+          "fontSize": { "magnitude": 14, "unit": "PT" }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 14, "unit": "PT" },
+          "spaceBelow": { "magnitude": 4, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "HEADING_4",
+        "textStyle": {
+          "bold": true,
+          "fontSize": { "magnitude": 12, "unit": "PT" }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 12, "unit": "PT" },
+          "spaceBelow": { "magnitude": 2, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "HEADING_5",
+        "textStyle": {
+          "bold": true,
+          "fontSize": { "magnitude": 11, "unit": "PT" }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 11, "unit": "PT" },
+          "spaceBelow": { "magnitude": 2, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "HEADING_6",
+        "textStyle": {
+          "bold": true,
+          "fontSize": { "magnitude": 10, "unit": "PT" }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 10, "unit": "PT" },
+          "spaceBelow": { "magnitude": 2, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      },
+      {
+        "namedStyleType": "TITLE",
+        "textStyle": {
+          "fontSize": { "magnitude": 16, "unit": "PT" },
+          "weightedFontFamily": { "fontFamily": "Lucida Sans", "weight": 400 }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "lineSpacing": 195.41667,
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 3.3, "unit": "PT" },
+          "indentStart": { "magnitude": 5.5, "unit": "PT" }
+        }
+      },
+      {
+        "namedStyleType": "SUBTITLE",
+        "textStyle": {
+          "italic": true,
+          "foregroundColor": {
+            "color": { "rgbColor": { "red": 0.4, "green": 0.4, "blue": 0.4 } }
+          },
+          "fontSize": { "magnitude": 24, "unit": "PT" },
+          "weightedFontFamily": { "fontFamily": "Georgia", "weight": 400 }
+        },
+        "paragraphStyle": {
+          "namedStyleType": "NORMAL_TEXT",
+          "direction": "LEFT_TO_RIGHT",
+          "spaceAbove": { "magnitude": 18, "unit": "PT" },
+          "spaceBelow": { "magnitude": 4, "unit": "PT" },
+          "keepLinesTogether": true,
+          "keepWithNext": true,
+          "pageBreakBefore": false
+        }
+      }
+    ]
+  },
+  "lists": {
+    "kix.2e0131685utl": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 18, "unit": "PT" },
+            "indentStart": { "magnitude": 36, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%1",
+            "indentFirstLine": { "magnitude": 54, "unit": "PT" },
+            "indentStart": { "magnitude": 72, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 90, "unit": "PT" },
+            "indentStart": { "magnitude": 108, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 126, "unit": "PT" },
+            "indentStart": { "magnitude": 144, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 162, "unit": "PT" },
+            "indentStart": { "magnitude": 180, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 198, "unit": "PT" },
+            "indentStart": { "magnitude": 216, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 234, "unit": "PT" },
+            "indentStart": { "magnitude": 252, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 270, "unit": "PT" },
+            "indentStart": { "magnitude": 288, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 306, "unit": "PT" },
+            "indentStart": { "magnitude": 324, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          }
+        ]
+      }
+    },
+    "kix.hw5pt4whjiqt": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 18, "unit": "PT" },
+            "indentStart": { "magnitude": 36, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%1",
+            "indentFirstLine": { "magnitude": 54, "unit": "PT" },
+            "indentStart": { "magnitude": 72, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 90, "unit": "PT" },
+            "indentStart": { "magnitude": 108, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 126, "unit": "PT" },
+            "indentStart": { "magnitude": 144, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 162, "unit": "PT" },
+            "indentStart": { "magnitude": 180, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 198, "unit": "PT" },
+            "indentStart": { "magnitude": 216, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 234, "unit": "PT" },
+            "indentStart": { "magnitude": 252, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 270, "unit": "PT" },
+            "indentStart": { "magnitude": 288, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 306, "unit": "PT" },
+            "indentStart": { "magnitude": 324, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          }
+        ]
+      }
+    },
+    "kix.k5h8ec5q62lc": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 18, "unit": "PT" },
+            "indentStart": { "magnitude": 36, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%1",
+            "indentFirstLine": { "magnitude": 54, "unit": "PT" },
+            "indentStart": { "magnitude": 72, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 90, "unit": "PT" },
+            "indentStart": { "magnitude": 108, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 126, "unit": "PT" },
+            "indentStart": { "magnitude": 144, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 162, "unit": "PT" },
+            "indentStart": { "magnitude": 180, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 198, "unit": "PT" },
+            "indentStart": { "magnitude": 216, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 234, "unit": "PT" },
+            "indentStart": { "magnitude": 252, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 270, "unit": "PT" },
+            "indentStart": { "magnitude": 288, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 306, "unit": "PT" },
+            "indentStart": { "magnitude": 324, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          }
+        ]
+      }
+    },
+    "kix.list.1": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 5.5, "unit": "PT" },
+            "indentStart": { "magnitude": 26.5, "unit": "PT" },
+            "textStyle": {
+              "bold": false,
+              "italic": false,
+              "fontSize": { "magnitude": 10, "unit": "PT" },
+              "weightedFontFamily": { "fontFamily": "Arial", "weight": 400 }
+            }
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%1",
+            "indentFirstLine": {
+              "magnitude": 55.400000000000006,
+              "unit": "PT"
+            },
+            "indentStart": { "magnitude": 76.4, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 104.8, "unit": "PT" },
+            "indentStart": { "magnitude": 125.8, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 154.2, "unit": "PT" },
+            "indentStart": { "magnitude": 175.2, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 203.6, "unit": "PT" },
+            "indentStart": { "magnitude": 224.6, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 253, "unit": "PT" },
+            "indentStart": { "magnitude": 274, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 302.4, "unit": "PT" },
+            "indentStart": { "magnitude": 323.4, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 351.8, "unit": "PT" },
+            "indentStart": { "magnitude": 372.8, "unit": "PT" },
+            "textStyle": {}
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "•",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 401.2, "unit": "PT" },
+            "indentStart": { "magnitude": 422.2, "unit": "PT" },
+            "textStyle": {}
+          }
+        ]
+      }
+    },
+    "kix.qtfj5x2zim58": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 18, "unit": "PT" },
+            "indentStart": { "magnitude": 36, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%1",
+            "indentFirstLine": { "magnitude": 54, "unit": "PT" },
+            "indentStart": { "magnitude": 72, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 90, "unit": "PT" },
+            "indentStart": { "magnitude": 108, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 126, "unit": "PT" },
+            "indentStart": { "magnitude": 144, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 162, "unit": "PT" },
+            "indentStart": { "magnitude": 180, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 198, "unit": "PT" },
+            "indentStart": { "magnitude": 216, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 234, "unit": "PT" },
+            "indentStart": { "magnitude": 252, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 270, "unit": "PT" },
+            "indentStart": { "magnitude": 288, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 306, "unit": "PT" },
+            "indentStart": { "magnitude": 324, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          }
+        ]
+      }
+    },
+    "kix.rx87lx6xkocd": {
+      "listProperties": {
+        "nestingLevels": [
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%0",
+            "indentFirstLine": { "magnitude": 18, "unit": "PT" },
+            "indentStart": { "magnitude": 36, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%1",
+            "indentFirstLine": { "magnitude": 54, "unit": "PT" },
+            "indentStart": { "magnitude": 72, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%2",
+            "indentFirstLine": { "magnitude": 90, "unit": "PT" },
+            "indentStart": { "magnitude": 108, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%3",
+            "indentFirstLine": { "magnitude": 126, "unit": "PT" },
+            "indentStart": { "magnitude": 144, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%4",
+            "indentFirstLine": { "magnitude": 162, "unit": "PT" },
+            "indentStart": { "magnitude": 180, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%5",
+            "indentFirstLine": { "magnitude": 198, "unit": "PT" },
+            "indentStart": { "magnitude": 216, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "●",
+            "glyphFormat": "%6",
+            "indentFirstLine": { "magnitude": 234, "unit": "PT" },
+            "indentStart": { "magnitude": 252, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "○",
+            "glyphFormat": "%7",
+            "indentFirstLine": { "magnitude": 270, "unit": "PT" },
+            "indentStart": { "magnitude": 288, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          },
+          {
+            "bulletAlignment": "START",
+            "glyphSymbol": "■",
+            "glyphFormat": "%8",
+            "indentFirstLine": { "magnitude": 306, "unit": "PT" },
+            "indentStart": { "magnitude": 324, "unit": "PT" },
+            "textStyle": { "underline": false },
+            "startNumber": 1
+          }
+        ]
+      }
+    }
+  },
+  "revisionId": "ALBJ4LtmbY-ZeJrIXyDZm6_iMYTrgd3-zSRresLitSv4ls3FU5ieLxAEGLBbvJkyfsa0gw15anZExzit7yi1ow",
+  "suggestionsViewMode": "SUGGESTIONS_INLINE",
+  "positionedObjects": {
+    "kix.ymeu4y1kv3ai": {
+      "objectId": "kix.ymeu4y1kv3ai",
+      "positionedObjectProperties": {
+        "positioning": {
+          "layout": "WRAP_TEXT",
+          "leftOffset": { "unit": "PT" },
+          "topOffset": { "unit": "PT" }
+        },
+        "embeddedObject": {
+          "embeddedDrawingProperties": {},
+          "embeddedObjectBorder": {
+            "color": { "color": { "rgbColor": {} } },
+            "width": { "unit": "PT" },
+            "dashStyle": "SOLID",
+            "propertyState": "NOT_RENDERED"
+          },
+          "size": {
+            "height": { "magnitude": 71.8701413427562, "unit": "PT" },
+            "width": { "magnitude": 72.12500000000001, "unit": "PT" }
+          },
+          "marginTop": { "unit": "PT" },
+          "marginBottom": { "unit": "PT" },
+          "marginRight": { "magnitude": 5.669291338582678, "unit": "PT" },
+          "marginLeft": { "unit": "PT" }
+        }
+      }
+    }
+  },
+  "documentId": "1f3ldvSzI2eP_S7I5XU6fWtVWKTHaSXotUtSjFuzBb2Y"
+}
