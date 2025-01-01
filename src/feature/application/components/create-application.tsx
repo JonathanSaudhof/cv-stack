@@ -14,8 +14,23 @@ import { Input } from "@/components/ui/input";
 import { api } from "@/trpc/react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { CreateApplicationSchema, type CreateApplication } from "../schema";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
-export default function CreateApplication() {
+export default function CreateApplicationForm() {
+  const form = useForm<CreateApplication>({
+    resolver: zodResolver(CreateApplicationSchema),
+  });
   const [companyName, setCompanyName] = useState<string>("");
   const [jobTitle, setJobTitle] = useState<string>("");
   const [jobDescriptionUrl, setJobDescriptionUrl] = useState<string>("");
@@ -36,19 +51,8 @@ export default function CreateApplication() {
     }
   };
 
-  const handleSaveClick = () => {
-    setCompanyName("");
-    mutate(
-      { companyName, jobTitle, jobDescriptionUrl },
-      {
-        onSuccess: () => {
-          router.refresh();
-        },
-        onError: (error) => {
-          console.error(error);
-        },
-      },
-    );
+  const handleSaveClick = (data: CreateApplication) => {
+    console.log(data);
   };
 
   return (
@@ -57,35 +61,65 @@ export default function CreateApplication() {
         <Button>Create Application</Button>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader>
-          <DialogTitle>Create Application</DialogTitle>
-        </DialogHeader>
-        <Input
-          type="text"
-          placeholder="Company Name"
-          name="companyName"
-          onChange={handleInputChange}
-        />
-        <Input
-          type="text"
-          placeholder="Job Title"
-          name="jobTitle"
-          onChange={handleInputChange}
-        />
-        <Input
-          type="text"
-          placeholder="Job Description URL"
-          name="jobDescriptionUrl"
-          onChange={handleInputChange}
-        />
-        <DialogFooter>
-          <DialogClose asChild>
-            <Button onClick={handleSaveClick}>Save</Button>
-          </DialogClose>
-          <DialogClose asChild>
+        <Form {...form}>
+          <DialogHeader>
+            <DialogTitle>Create Application</DialogTitle>
+          </DialogHeader>
+          <form
+            onSubmit={form.handleSubmit(handleSaveClick)}
+            className="flex flex-col space-y-4"
+            id="create-application-form"
+          >
+            <FormField
+              control={form.control}
+              name="companyName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Company Name</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Apple Inc." {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="jobTitle"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Job Title</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Senior Software Developer" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="jobDescriptionUrl"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Job Description URL</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="https://www.apple.com/jobs"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </form>
+          <DialogFooter>
+            <Button type="submit" form="create-application-form">
+              Save
+            </Button>
             <Button variant="secondary">Cancel</Button>
-          </DialogClose>
-        </DialogFooter>
+          </DialogFooter>
+        </Form>
       </DialogContent>
     </Dialog>
   );
