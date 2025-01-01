@@ -15,9 +15,13 @@ export default async function ApplicationsList({
     <section className="flex flex-col gap-4 p-8">
       <h2 className="text-2xl font-semibold">Applications</h2>
       <ul className="flex flex-col gap-2">
-        {applications.map((application) => (
-          <ApplicationItem key={application.folderId} {...application} />
-        ))}
+        {applications.length > 0 ? (
+          applications.map((application) => (
+            <ApplicationItem key={application.folderId} {...application} />
+          ))
+        ) : (
+          <p>No applications found</p>
+        )}
       </ul>
     </section>
   );

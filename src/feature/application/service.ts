@@ -126,8 +126,7 @@ async function createOverviewTable(
 }
 
 async function getAllApplications(folderId: string) {
-  const folders = await getAllFoldersInFolder(folderId);
-
+  const folders = await getAllFoldersInFolder(folderId, false);
   return folders;
 }
 

@@ -27,17 +27,19 @@ export async function createNewFolder(
   return folder.data.id;
 }
 
-export async function getAllFoldersInFolder(folderId: string) {
+export async function getAllFoldersInFolder(
+  folderId: string,
+  filterTrashed = false,
+) {
   const drive = await getAuthenticatedDrive();
 
   const folders = await drive.files.list({
-    q: `'${folderId}' in parents and mimeType = 'application/vnd.google-apps.folder'`,
+    q: `'${folderId}' in parents and mimeType = 'application/vnd.google-apps.folder' and trashed = ${filterTrashed ? "true" : "false"}`,
     fields: "files(id, name, mimeType)",
   });
 
   return folders.data.files;
 }
-
 export async function getFileInFolderByName(
   folderId: string,
   fileName: string,
