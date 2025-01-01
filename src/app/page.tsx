@@ -2,8 +2,11 @@ import { Button } from "@/components/ui/button";
 import { api, HydrateClient } from "@/trpc/server";
 import FileExplorer from "../feature/file-explorer/FileExplorer";
 import CreateApplication from "@/feature/application/components/create-application";
-import ApplicationsList from "@/feature/application/components/application-list";
+import ApplicationsList, {
+  ApplicationListSkeleton,
+} from "@/feature/application/components/application-list";
 import { FileInput } from "lucide-react";
+import { Suspense } from "react";
 
 export default async function Home() {
   const template = await api.config.getTemplateFile();
@@ -36,8 +39,11 @@ export default async function Home() {
 
           <CreateApplication />
         </section>
+
         {config?.folderId ? (
-          <ApplicationsList folderId={config.folderId} />
+          <Suspense fallback={<ApplicationListSkeleton />} key={Math.random()}>
+            <ApplicationsList folderId={config.folderId} />
+          </Suspense>
         ) : (
           <div>No folderId found</div>
         )}

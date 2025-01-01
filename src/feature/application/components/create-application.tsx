@@ -3,71 +3,97 @@
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
+  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { api } from "@/trpc/react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { CreateApplicationSchema, type CreateApplication } from "../schema";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { api } from "@/trpc/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { CreateApplicationSchema, type CreateApplication } from "../schema";
+import { set } from "zod";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 
-export default function CreateApplicationForm() {
+export default function CreateApplicationContainer() {
+  const [open, setOpen] = useState<boolean>(false);
+
+  console.log("CreateApplicationContainer");
+
+  return (
+    <>
+      <Button
+        onClick={() => {
+          setOpen(true);
+        }}
+      >
+        Create Application
+      </Button>
+      <CreateApplicationForm open={open} onOpenChange={setOpen} />
+    </>
+  );
+}
+
+function CreateApplicationForm({
+  open,
+  onOpenChange,
+}: Readonly<{
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}>) {
   const form = useForm<CreateApplication>({
     resolver: zodResolver(CreateApplicationSchema),
   });
-  const [companyName, setCompanyName] = useState<string>("");
-  const [jobTitle, setJobTitle] = useState<string>("");
-  const [jobDescriptionUrl, setJobDescriptionUrl] = useState<string>("");
-  const router = useRouter();
-  const { mutate } = api.applications.createApplication.useMutation();
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    switch (e.target.name) {
-      case "companyName":
-        setCompanyName(e.target.value);
-        break;
-      case "jobTitle":
-        setJobTitle(e.target.value);
-        break;
-      case "jobDescriptionUrl":
-        setJobDescriptionUrl(e.target.value);
-        break;
-    }
+  const router = useRouter();
+  const { isPending, mutate } =
+    api.applications.createApplication.useMutation();
+
+  const handleSaveClick = (application: CreateApplication) => {
+    mutate(application, {
+      onSuccess: () => {
+        router.refresh();
+        handleOpenChange(false);
+      },
+    });
   };
 
-  const handleSaveClick = (data: CreateApplication) => {
-    console.log(data);
+  const handleOpenChange = (open: boolean) => {
+    form.reset();
+    onOpenChange(open);
+  };
+
+  const handleCancelClick = () => {
+    handleOpenChange(false);
   };
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button>Create Application</Button>
-      </DialogTrigger>
-      <DialogContent>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
+      <DialogTrigger asChild></DialogTrigger>
+      <DialogContent className="">
+        <DialogHeader>
+          <DialogTitle>Create Application</DialogTitle>
+          <DialogDescription>
+            Create a new CV copy for a position
+          </DialogDescription>
+        </DialogHeader>
         <Form {...form}>
-          <DialogHeader>
-            <DialogTitle>Create Application</DialogTitle>
-          </DialogHeader>
           <form
             onSubmit={form.handleSubmit(handleSaveClick)}
-            className="flex flex-col space-y-4"
+            className="flex h-[350px] flex-col space-y-4"
             id="create-application-form"
           >
             <FormField
@@ -113,13 +139,20 @@ export default function CreateApplicationForm() {
               )}
             />
           </form>
-          <DialogFooter>
-            <Button type="submit" form="create-application-form">
-              Save
-            </Button>
-            <Button variant="secondary">Cancel</Button>
-          </DialogFooter>
         </Form>
+        <DialogFooter>
+          <Button
+            type="submit"
+            form="create-application-form"
+            disabled={isPending}
+          >
+            {isPending && <LoadingSpinner className="mr-2" />}
+            {isPending ? "Saving..." : "Save"}
+          </Button>
+          <Button variant="secondary" type="button" onClick={handleCancelClick}>
+            Cancel
+          </Button>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   );
