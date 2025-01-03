@@ -6,6 +6,7 @@ import {
   type Application,
   CreateApplicationSchema,
 } from "@/feature/application/schema";
+import { revalidatePath, revalidateTag, unstable_cache } from "next/cache";
 
 export const applicationsRouter = createTRPCRouter({
   createApplication: protectedProcedure
@@ -30,6 +31,9 @@ export const applicationsRouter = createTRPCRouter({
         baseFolderId: config?.folderId,
         templateDocId: config?.defaultTemplateDocId,
       });
+
+      revalidateTag("getAllApplications");
+      revalidatePath("/");
     }),
   getAllApplications: protectedProcedure
     .input(
@@ -38,16 +42,31 @@ export const applicationsRouter = createTRPCRouter({
       }),
     )
     .query(async ({ input }) => {
-      const rawApplications = await applicationService.getAllApplications(
-        input.folderId,
+      const cachedApplications = unstable_cache(
+        (folderId: string) => applicationService.getAllApplications(folderId),
+        [],
+        {
+          tags: ["getAllApplications"],
+        },
       );
+      const rawApplications = await cachedApplications(input.folderId);
+
       if (!rawApplications) {
         return [];
       }
 
+      const cachedGetMetaDataInFolder = (applicationId: string) =>
+        unstable_cache(
+          () => applicationService.getMetaDataInFolder(applicationId),
+          [`metaData:${applicationId}`],
+          {
+            tags: ["getAllApplications", `metaData:${applicationId}`],
+          },
+        );
+
       const metadataFiles = await Promise.all(
         rawApplications.map((application) =>
-          applicationService.getMetaDataInFolder(application.id!),
+          cachedGetMetaDataInFolder(application.id!)(),
         ),
       );
 
