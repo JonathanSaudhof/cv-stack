@@ -6,10 +6,26 @@ import {
 import { z } from "zod";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 import { getDocumentById } from "@/lib/google/drive";
+import { unstable_cache } from "next/cache";
+
+export const cachedGetOrCreateConfigFile = (userId: string) =>
+  unstable_cache(() => getOrCreateConfigFile(), [`config-${userId}`], {
+    tags: [`config-${userId}`],
+  });
+
+const cachedGetTemplateFile = (userId: string) =>
+  unstable_cache(
+    (documentId: string) => getDocumentById(documentId),
+    [`template-${userId}`],
+    {
+      tags: [`config-${userId}`, `template-${userId}`],
+    },
+  );
 
 export const configRouter = createTRPCRouter({
-  getConfigFile: protectedProcedure.query(async () => {
-    const config = await getOrCreateConfigFile();
+  getConfigFile: protectedProcedure.query(async ({ ctx }) => {
+    const { session } = ctx;
+    const config = await cachedGetOrCreateConfigFile(session.user.id!)();
 
     return config;
   }),
@@ -38,15 +54,19 @@ export const configRouter = createTRPCRouter({
 
       return await getConfigFile();
     }),
-  getTemplateFile: protectedProcedure.query(async () => {
-    const config = await getOrCreateConfigFile();
+  getTemplateFile: protectedProcedure.query(async ({ ctx }) => {
+    const { session } = ctx;
+    const config = await cachedGetOrCreateConfigFile(session.user.id!)();
 
     if (!config.defaultTemplateDocId) {
       console.error("Default template doc id not found");
       return null;
     }
 
-    const document = await getDocumentById(config.defaultTemplateDocId);
+    const document = await cachedGetTemplateFile(session.user.id!)(
+      config.defaultTemplateDocId,
+    );
+
     return document;
   }),
 });

@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { api, HydrateClient } from "@/trpc/server";
-import FileExplorer from "../feature/file-explorer/FileExplorer";
-import CreateApplication from "@/feature/application/components/create-application";
 import ApplicationsList, {
   ApplicationListSkeleton,
 } from "@/feature/application/components/application-list";
+import CreateApplication from "@/feature/application/components/create-application";
+import { api, HydrateClient } from "@/trpc/server";
 import { FileInput } from "lucide-react";
 import { Suspense } from "react";
+import FileExplorer from "../feature/file-explorer/FileExplorer";
 
 export default async function Home() {
   const template = await api.config.getTemplateFile();
@@ -36,7 +36,6 @@ export default async function Home() {
           ) : (
             "No template selected"
           )}
-
           <CreateApplication />
         </section>
 

@@ -1,21 +1,40 @@
-import { z } from "zod";
-import { createTRPCRouter, protectedProcedure } from "../trpc";
-import { getConfigFile } from "@/feature/file-explorer/services";
-import applicationService from "@/feature/application/service";
 import {
   type Application,
   CreateApplicationSchema,
 } from "@/feature/application/schema";
+import applicationService from "@/feature/application/service";
+import { getOrCreateConfigFile } from "@/feature/file-explorer/services";
+import { unstable_cache } from "next/cache";
+import { z } from "zod";
+import cacheTags from "../cache-tags";
+import { createTRPCRouter, protectedProcedure } from "../trpc";
+
+const cachedApplications = (userId: string) =>
+  unstable_cache(
+    (folderId: string) => applicationService.getAllApplications(folderId),
+    [cacheTags.applications.list(userId)],
+    {
+      tags: [cacheTags.applications.list(userId)],
+    },
+  );
+
+const cachedGetMetaDataInFolder = (applicationId: string, userId: string) =>
+  unstable_cache(
+    () => applicationService.getMetaDataInFolder(applicationId),
+    [cacheTags.applications.metadata(applicationId)],
+    {
+      tags: [
+        cacheTags.applications.list(userId),
+        cacheTags.applications.metadata(applicationId),
+      ],
+    },
+  );
 
 export const applicationsRouter = createTRPCRouter({
   createApplication: protectedProcedure
     .input(CreateApplicationSchema)
     .mutation(async ({ input }) => {
-      const config = await getConfigFile();
-
-      if (!config) {
-        throw new Error("Config file not found");
-      }
+      const config = await getOrCreateConfigFile();
 
       if (!config.folderId) {
         throw new Error("Config file is missing folderId");
@@ -37,17 +56,18 @@ export const applicationsRouter = createTRPCRouter({
         folderId: z.string(),
       }),
     )
-    .query(async ({ input }) => {
-      const rawApplications = await applicationService.getAllApplications(
+    .query(async ({ input, ctx }) => {
+      const rawApplications = await cachedApplications(ctx.session.user.id!)(
         input.folderId,
       );
+
       if (!rawApplications) {
         return [];
       }
 
       const metadataFiles = await Promise.all(
         rawApplications.map((application) =>
-          applicationService.getMetaDataInFolder(application.id!),
+          cachedGetMetaDataInFolder(application.id!, ctx.session.user.id!)(),
         ),
       );
 
