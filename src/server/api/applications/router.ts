@@ -15,6 +15,7 @@ const cachedApplications = (userId: string) =>
     [cacheTags.applications.list(userId)],
     {
       tags: [cacheTags.applications.list(userId)],
+      revalidate: 60 * 60,
     },
   );
 
@@ -27,6 +28,7 @@ const cachedGetMetaDataInFolder = (applicationId: string, userId: string) =>
         cacheTags.applications.list(userId),
         cacheTags.applications.metadata(applicationId),
       ],
+      revalidate: 60 * 60,
     },
   );
 
