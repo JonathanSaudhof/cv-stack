@@ -19,19 +19,16 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { CreateApplicationSchema, type CreateApplication } from "../schema";
-import { set } from "zod";
-import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { invalidateApplicationsList } from "./actions/revalidation";
 
 export default function CreateApplicationContainer() {
   const [open, setOpen] = useState<boolean>(false);
-
-  console.log("CreateApplicationContainer");
 
   return (
     <>
@@ -55,20 +52,23 @@ function CreateApplicationForm({
   onOpenChange: (open: boolean) => void;
 }>) {
   const form = useForm<CreateApplication>({
+    defaultValues: {
+      companyName: "",
+      jobTitle: "",
+      jobDescriptionUrl: "",
+    },
     resolver: zodResolver(CreateApplicationSchema),
   });
 
-  const router = useRouter();
-  const { isPending, mutate } =
-    api.applications.createApplication.useMutation();
+  const { isPending, mutate } = api.applications.createApplication.useMutation({
+    onSuccess: async () => {
+      await invalidateApplicationsList();
+      handleOpenChange(false);
+    },
+  });
 
-  const handleSaveClick = (application: CreateApplication) => {
-    mutate(application, {
-      onSuccess: () => {
-        router.refresh();
-        handleOpenChange(false);
-      },
-    });
+  const handleSaveClick = async (application: CreateApplication) => {
+    mutate(application);
   };
 
   const handleOpenChange = (open: boolean) => {
